@@ -1,0 +1,197 @@
+@charset "utf-8";
+/* CSS Document */
+.contentbox {
+	float: left;
+	margin: 0;
+	/*-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border-bottom: 1px solid #C1C1C1;*/
+	}
+.wfull {
+	width: 1440px;
+	padding: 0;
+	}
+.stepcarousel{
+	position: relative; /*leave this value alone*/
+	border: 0px;
+	overflow: scroll; /*leave this value alone*/
+	width: 1440px; /*Width of Carousel Viewer itself*/
+	height: 375px; /*Height should enough to fit largest content's height*/
+	}
+
+	.stepcarousel .customer-belt{
+	position: absolute; /*leave this value alone*/
+	left: 0;
+	top: 0;
+	}
+
+	.stepcarousel .customer-container{
+	float: left; /*leave this value alone*/
+	overflow: hidden; /*clip content that go outside dimensions of holding panel DIV*/
+	margin: 0; /*margin around each panel*/
+	padding:0;
+	width:480px; /*Width of each panel holding each content. If removed, widths should be individually defined on each content DIV then. */
+	}
+	.stepcarousel .news-divider{
+		visibility:hidden;
+		background:none;
+		width:0;
+		height:0;
+		padding:0;
+		margin:0;
+		clear:none;
+		}
+	.stepcarousel .news-left{
+		visibility:hidden;
+		float:none;
+		margin:0;
+		padding:0;
+		width:0;
+		height:0;
+		overflow:hidden;
+	}
+	.stepcarousel .customer{
+	float: left; /*leave this value alone*/
+	overflow: hidden; /*clip content that go outside dimensions of holding panel DIV*/
+	margin: 0 0px; /*margin around each panel*/
+	width:480px; /*Width of each panel holding each content. If removed, widths should be individually defined on each content DIV then. */
+	}
+	
+	.customer {
+		width:480px;
+		height:375px;
+		background: #FFF;
+		padding: 0;
+		/*border: 3px solid #FF2828;*/
+		text-align:center;
+	}
+	.customer p{
+		font-family: 'droid_sansregular';
+		font-size:13px;
+		line-height:20px;
+		font-weight:400;
+		color:#666;
+		width:290px;
+		margin:0 0 18px;
+		height:auto;
+		overflow:hidden;
+	}
+	/*.customer:hover {
+		border: 3px solid #000;
+		height:144px;
+	}*/
+	.customer h2 {
+		width: 290px;
+		color: #000;
+		font-size: 16px;
+		font-weight: 400;
+		text-align: left;
+		line-height:20px;
+		margin:0;
+		padding:0 0 4px;
+		letter-spacing:0;
+	}
+	.customer p.bold-italic{
+		font-family: 'droid_sansregular';
+		font-size:13px;
+		line-height:20px;
+		font-weight:400;
+		color:#8C3233;
+		font-style:normal;
+		margin: 0 auto 4px;
+		padding: 0 0 8px;
+		background-image: url(../images/news-title-sep.png);
+		background-position:center bottom;
+		background-repeat:no-repeat;
+		height:auto;
+		}
+	.customer span{
+		visibility:hidden;
+		margin:0;
+		padding:0;
+		width:0;
+		overflow:none;
+		height:auto;
+		display:none;
+		}
+	div.customer:hover .news-title {
+		/*background-color:#111;	*/	
+	}
+	
+	#home_offers div.customer img {
+		width: 80px;
+		margin: 10px auto;
+	}
+	
+	#customer-container div.customer ul {
+		margin: 20px;
+		min-height: 260px;
+		height: 328px;
+	}
+	
+	#customer-container div.customer ul li {
+		margin: 5px 0 0 0;
+		padding: 3px 0px 3px 30px;
+		font-family:'ropa_sansregular';
+		font-size: 15px;
+		line-height: 16px;
+		list-style: none;
+		font-weight:normal;
+		color: #666;
+		text-align:left;
+	}
+	
+	#customer-container div.customer ul li.duration {
+		font-size: 13px;
+	}
+	
+	#customer-container div.customer ul li .title{
+		margin: 0px;
+		padding: 0px;
+		font-family:'latoregular';
+		font-size: 13px;
+		font-weight: bold;
+		color: #014C70;
+		line-height: 13px;
+		text-align:left;
+	}
+	
+	li.price {
+		background: url(../images/currency.png) 4px center no-repeat;
+	}
+	li.payout {
+		background: url(../images/money-coin.png) 4px center no-repeat;
+	}
+	li.company {
+		background: url(../images/building-old.png) 4px center no-repeat;
+	}
+	li.date {
+		background: url(../images/chart-up.png) 4px center no-repeat;
+	}
+	li.duration {
+		background: url(../images/clock.png) 4px center no-repeat;
+		font-size: 13px;
+	}
+	li.cashflow {
+		background: url(../images/moneys.png) 4px center no-repeat;
+	}
+
+	div.reserve_now {
+		padding: 0;
+		width: 160px;
+		height:40px;
+		margin: 20px auto;
+		font-size: 20px;
+		line-height:40px;
+		color: #FFF;
+		text-align: center;
+		background-image:url(../images/reserve-now-button-bg.png);
+	}	
+	div.reserve_now a {
+		text-decoration: none;
+		color: #FFF;
+	}
+	div.reserve_now:hover {
+		background-image:url(../images/reserve-now-button-bg-hover.png);
+	}
