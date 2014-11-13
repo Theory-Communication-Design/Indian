@@ -1,0 +1,156 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	margin:0 auto;
+	}
+
+p{
+	margin:0;
+	padding:0 0 15px 0;
+	line-height:18px;
+	}
+	
+.txtbold{
+	font-weight:bold;
+	}
+
+.h1{
+	font-weight:bold;
+	color:#327059;
+	text-align:center;
+	}
+	
+#monthly-newsletter{
+	padding:90px 30px 0;
+	width:250px;
+	height:220px;
+	background-image:url(../images/360-yacht-care-special-discounts-bg.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	}	
+	
+#cede{
+	padding:104px 62px 0 62px;
+	width:250px;
+	height:285px;
+	
+	background-image:url(../images/360-yacht-care-cede-bg.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	}	
+	
+#office-directions{
+	padding:104px 60px 0 60px;
+	width:254px;
+	height:285px;
+	
+	background-image:url(../images/360-yacht-care-directions-to-office-bg.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333;
+	}
+/* home-form start*/
+
+.signupframe{
+	color: #F1781F;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+}
+
+	.inputbox{
+		margin:0 auto;
+		padding:0 13px;
+		width:224px;
+		height:37px;
+		line-height:37px;
+			
+		font-family: Arimo, sans-serif;
+		font-size:14px;
+		font-weight:bold;
+		color:#FFF;
+			
+		background-image:url(../images/360-yacht-care-input-box-bg.jpg);
+		background-repeat:no-repeat;
+		background-position:center top;
+		border:none;
+		}
+
+	.submitbutton{
+		margin:0 auto;
+		padding:0 0 2px 0;
+		width:91px;
+		height:30px;
+		line-height:30px;
+		
+		font-family:Arimo, sans-serif;
+		font-size:12px;
+		font-weight:bold;
+		color:#FFF;
+			
+		background-image:url(../images/360-yacht-care-submit-button-bg.png);
+		background-repeat:no-repeat;
+		background-position:center top;
+		border:none;
+		}
+			
+.signupframe .required{
+	font-size: 10px;
+	line-height:30px;
+}
+
+.signupframe .asterisk{
+	font-size:10px;
+	line-height:30px;
+}
+.signupframe .asterisk-pink{
+	font-size:20px;
+}
+
+.link,
+.link a {
+	text-decoration: none;
+	line-height:15px;
+}
+
+/* CEDE Form */
+#mid-form-bg{
+	margin:0 auto;
+	background-image:url(../images/360-yacht-care-client-login-bg.jpg);
+	background-repeat:no-repeat;
+	background-position:center top;
+	}
+
+#mid-form{
+	margin:0 auto;
+	padding:15px 0 0 0;
+	width:260px;
+	height:170px;
+	}
+#mid-form .signupframe{
+	color: #fff;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size: 13px;
+	line-height:18px;
+	/*height:235px;*/
+}
+
+#mid-form .signupframe .required{
+	font-size: 18px;
+	color:#f00;
+}
+
+#mid-form .asterisk{
+	font-size:18px;
+	color:#f00;
+}
+
+#mid-form .reqtext{
+	font-size:10px;
+	color:#FFF;
+}

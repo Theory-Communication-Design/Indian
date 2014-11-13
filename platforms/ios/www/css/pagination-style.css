@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+@font-face {
+    font-family: 'latoregular';
+    src: url('lato-regular-webfont.eot');
+    src: url('lato-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('lato-regular-webfont.woff') format('woff'),
+         url('lato-regular-webfont.ttf') format('truetype'),
+         url('lato-regular-webfont.svg#latoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*Sample CSS used for the Virtual Pagination Demos. Modify/ remove as desired*/
+
+.paginationstyle{ /*Style for demo pagination divs*/
+width: auto;
+text-align: center;
+padding: 2px 0;
+margin: 0 auto 25px;
+}
+
+.paginationstyle select{ /*Style for demo pagination divs' select menu*/
+border: 1px solid navy;
+margin: 0 15px;
+}
+
+.paginationstyle a{ /*Pagination links style*/
+margin:0 2px;
+padding: 3px 3px;
+text-decoration: none;
+color:#000;
+font-size:11px;
+font-family:'latoregular';
+font-weight:400;
+}
+
+.paginationstyle a.button{
+margin:0 15px;
+padding: 3px 10px;
+text-decoration: none;
+color: #FFF;
+background-color: #9c122a;	
+}
+
+.paginationstyle a:hover, .paginationstyle a.selected{
+color: #FFF;
+background-color: #9c122a;
+}
+
+.paginationstyle a.disabled, .paginationstyle a.disabled:hover{ /*Style for "disabled" previous or next link*/
+cursor: default;
+color: #DDD;
+border-color: transparent;
+}
+
+.paginationstyle a.imglinks{ /*Pagination Image links style (class="imglinks") */
+border: 0;
+padding: 0;
+}
+
+.paginationstyle a.imglinks img{
+vertical-align: bottom;
+border: 0;
+}
+
+.paginationstyle a.imglinks a:hover{
+background: none;
+}
+
+.paginationstyle .flatview a:hover, .paginationstyle .flatview a.selected{ /*Pagination div "flatview" links style*/
+color:#FFF;
+background-color: #9c122a;
+}

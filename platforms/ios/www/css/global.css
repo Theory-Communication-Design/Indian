@@ -1,0 +1,6380 @@
+/* Global styles for iContact Publisher */
+
+/* Element */
+
+* {
+	margin: 0;
+	padding: 0;
+	}
+
+a:link,
+a:visited {
+	color: #4774A0;
+	}
+	a:link.highlight,
+	a:visited.highlight {
+		color: #6B3; 
+		font-weight: bold;
+		}
+
+body {
+	/*background: #EEE;*/
+	background-color:#000;
+	background-image:url(../images/admin-emp-bg.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
+	color: #000;
+	font: 13px/normal Verdana, Arial, Helvetica, sans-serif;
+	margin: 0 auto;
+	}
+
+br {
+	clear: both;
+	}
+
+dfn {
+	display: block;
+	font-size: 10px;
+	font-style: normal;
+	margin-bottom: 6px;
+	}
+
+fieldset {
+	border: 0;
+	margin-bottom: 20px;
+	}
+	fieldset.boxed {
+		border: 1px solid #CCC;
+		padding: 10px;
+		}
+	fieldset fieldset {
+		margin-bottom: 0;
+		}
+
+h1,
+h2,
+h3,
+h4 {
+	color: #264978;
+	font-family: 'Trebuchet MS', 'Nimbus Sans L', Arial, Helvetica, sans-serif;
+	}
+	h2 {
+		font-size: 20px;
+		font-weight: normal;
+		margin: 0 0 10px 0;
+		}
+	h3 {
+		font-size: 15px;
+		font-weight: bold;
+		margin: 0 0 2px 0;
+		}
+
+hr {
+	display: none;
+	}
+
+input,
+textarea,
+select {
+	display: block;
+	font-size: 14px;
+	margin-bottom: 10px;
+	}
+	select {
+		font-size: 12px;
+		}
+		#ManyCampaigns select {
+			margin-bottom: 5px;
+			}
+	input.cbLeft {
+		float: left;
+		margin-right: 10px;
+		margin-top: 0;
+		}
+	fieldset.RadioGroup input,
+	fieldset.CheckboxGroup input {
+		float: left;
+		margin-right: 10px;
+		margin-bottom: 10px;
+		}
+
+img {
+	border: 0;
+	}
+
+label {
+	display: block;
+	margin-bottom: 10px;
+	margin-top: 15px;
+	}
+	label.checkbox {
+		float: left;
+		margin-bottom: 10px;
+		margin-top: 0;
+		}
+	label.lblCheckbox {
+		margin-bottom: 0;
+		}
+	fieldset.boxed label {
+		margin-top: 0;
+		}
+	fieldset.RadioGroup label,
+	fieldset.CheckboxGroup label {
+		display: inline;
+		margin-top: -20px;
+		}
+
+legend {
+	color: #264978;
+	font-weight: bold;
+	padding: 0 4px;
+	}
+	legend.likeAHeading {
+		margin-bottom: 10px;
+		padding: 0;
+		}
+	legend.likeALabel {
+		color: #000;
+		font-weight: normal;
+		margin-bottom: 10px;
+		padding: 0;
+		}
+
+/* Format Classes */
+
+.accessibleHidden {
+	left: -10000px;
+	position: absolute;
+	}
+
+button.transparent {
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+	}
+
+.button {
+	background: #2e6ca0 url(../images/bg_button.png) repeat-x;
+	border: 1px solid #307cb7;
+	border-bottom-color: #2e6ca0;
+	border-top-color: #3390d6;
+	color: #fff !important;
+	cursor: pointer;
+	font-family: "Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	font-size: 17px;
+	height: 32px;
+	line-height: 27px;
+	margin: 0 8px 8px 0;
+	outline: 0;
+	overflow: visible;
+	padding: 0 7px 6px;
+	text-decoration: none;
+	width: auto;
+	-moz-border-radius: 6px;
+	-moz-box-shadow: 3px 3px 15px #ccc;
+	-webkit-border-radius: 6px;
+	-webkit-box-shadow: 3px 3px 15px #ccc;
+	}
+	.allowNavigation .button,
+	.templateButtons .button {
+		margin-bottom: 20px;
+		}
+		.createConfirmationRequest .allowNavigation .button,
+		.messageView .allowNavigation .button,
+		.sendPending .allowNavigation .button,
+		.subscriberHistory .allowNavigation .button {
+			margin-top: 16px;
+			}
+	a.button {
+		display: block;
+		float: left;
+		height: 30px;
+		padding-bottom: 0;
+		}
+	.button.floatRight {
+		margin-right: 0;
+		margin-left: 8px;
+		}
+	.button:hover {
+		background-color: #4785b9;
+		background-position: 0 -40px;
+		border-color: #4ca9ef #4991cc #4785b9;
+		}
+	.buttonAction1Disabled,
+	.buttonAction1Disabled:hover {
+		background-color: #9abfdf;
+		background-position: 0 -80px;
+		border-color: #9cd3fd #9bcbf2 #9ac6e9;
+		cursor: default;
+		}
+	.buttonAction2 {
+		background-color: #029900;
+		background-position: 0 -120px;
+		border-color: #5dcf25 #42bf1a #029900;
+		}
+		.buttonAction2:hover {
+			background-color: #1bb219;
+			background-position: 0 -160px;
+			border-color: #76e83e #5bd833 #1bb219;
+			}
+	.buttonAction2Disabled,
+	.buttonAction2Disabled:hover {
+		background-color: #9ad599;
+		background-position: 0 -200px;
+		border-color: #c6f1ab #bae9a6 #a9df9f;
+		cursor: default;
+		}
+	.buttonAction3 {
+		background-color: #b84900;
+		background-position: 0 -239px;
+		border-color: #f36000 #d35400 #b84900;
+		}
+		.buttonAction3:hover {
+			background-color: #d6671e;
+			background-position: 0 -279px;
+			border-color: #ff7c1e #ed701e #d6671e;
+			}
+	.buttonAction3Disabled,
+	.buttonAction3Disabled:hover {
+		background-color: #e3b699;
+		background-position: 0 -319px;
+		border-color: #fec9a6 #f7c6a6 #dfdfdf;
+		cursor: default;
+		}
+	.buttonAction4 {
+		background-color: #eda612;
+		background-position: 0 -359px;
+		border-color: #f8c91a #f2b716 #eda612;
+		color: #3F4040 !important;
+		}
+		.buttonAction4:hover {
+			background-color: #ffc300;
+			background-position: 0 -399px;
+			border-color: #ffde2e #ffd900 #ffc300;
+			}
+	.buttonAction4Disabled,
+	.buttonAction4Disabled:hover {
+		background-color: #f9e3b7;
+		background-position: 0 -439px;
+		border-color: #fff4bb #fcecb9 #f9e3b7;
+		color: #b8b7b1 !important;
+		cursor: default;
+		}
+	.buttonSizeSmall {
+		font-size: 13px;
+		height: 22px;
+		line-height: 18px;
+		padding-bottom: 4px;
+		}
+		a.buttonSizeSmall {
+			height: 20px !important;
+			}
+
+.clearFloat {
+	clear: both;
+	}
+	
+.disabled {
+	color: #666;
+	}
+
+.floatLeft {
+	float: left;
+	}
+
+.floatRight,
+a.floatRight {
+	float: right;
+	}
+	
+.highlight {
+	background: #ffc;
+	}
+
+.linkHelp {
+	font-weight: normal;
+	font-size: 8px;
+	}
+
+.newWindow {
+	background: url(../images/icons/newWindow.png) no-repeat 100% 50%;
+	padding-right: 15px;
+	}
+
+/* Composition */
+
+a.iconDraftLarge {
+	background-image: url(../images/icons/DraftMessageLarge.png);
+	}
+
+a.iconGridAdd {
+	background-image: url(../images/icons/add.png);
+	}
+
+a.iconGridAddListContacts,
+a.iconGridAddQuestions,
+a.iconGridARAddMessage {
+	background-image: url(../images/icons/actions_24/add_24.png);
+	}
+
+a.iconGridARType_ar_sequential {
+	background-image: url(../images/icons/Sequential.png);
+	float: left;
+	margin-right: 4px;
+	}
+
+a.iconGridArchivePublish {
+	background-image: url(../images/icons/actions_24/archive_publish_24.png);
+	}
+	
+a.iconGridArchivePublishDisabled{
+	background-image: url(../images/icons/actions_24/archive_publish_24_disabled.png);
+}
+
+a.iconGridArchiveUnpublish {
+	background-image: url(../images/icons/actions_24/archive_unpublish_24.png);
+	}
+	
+a.iconGridAutoresponder {
+	background-image: url(../images/icons/SendResponders.png);
+	}
+
+a.iconGridAutoresponderDisabled {
+	background-image: url(../images/icons/Disabled_Autoresponder.png);
+	}
+
+a.iconGridAutoresponderEnabled {
+	background-image: url(../images/icons/Enabled_Autoresponder.png);
+	}
+
+a.iconGridAutoresponderError {
+	background-image: url(../images/icons/Invalid_Autoresponder.png);
+	}
+
+a.iconGridBlogMessage {
+	background-image: url(../images/icons/BlogMessage.png);
+	float: left;
+	margin-right: 4px;
+	}
+
+a.iconGridCampaigns {
+	background-image: url(../images/icons/Campaign.png);
+	}
+
+a.iconGridCancelPending {
+	background-image: url(../images/icons/actions_24/cancelpending_24.png);
+	}
+
+a.iconGridChangePassword {
+	background-image: url(../images/icons/ChangePassword_large.png);
+	}
+
+a.iconGridCheck {
+	background-image: url(../images/icons/checkmark.png);
+	}
+
+a.iconGridContactHistory {
+	background-image: url(../images/icons/actions_24/hist_24.png);
+	}
+
+a.iconGridCopy, 
+a.iconGridCopySurvey {
+	background-image: url(../images/icons/actions_24/newfromcopy_24.png);
+	}
+	
+a.iconGridCopyDisabled{
+	background-image: url(../images/icons/actions_24/newfromcopy_24_disabled.png);
+}
+
+a.iconGridCustomField {
+	background-image: url(../images/icons/CustomField.png);
+	}
+
+a.iconGridDelete,
+a.iconGridDeleteMessage,
+a.iconGridDeleteSurvey {
+	background-image: url(../images/icons/actions_24/trash_24.png);
+	}
+
+a.iconGridDeleteCustomField {
+	background-image: url(../images/icons/delete.png);
+	}
+
+a.iconGridDown {
+	background-image: url(../images/icons/actions_24/down_24.png);
+	}
+
+a.iconGridExportTemplate {
+	background-image: url(../images/icons/actions_24/exportTemplate_24.png);
+	}
+	
+a.iconGridEdit,
+a.iconGridEditContact {
+	background-image: url(../images/icons/actions_24/edit_24.png);
+	}
+
+a.iconGridExportSurvey {
+	background-image: url(../images/icons/actions_24/export_24.png);
+	}
+
+a.iconGridFolder {
+	background-image: url(../images/icons/foldr_16.png);
+	}
+
+a.iconGridHTMLMessage {
+	background-image: url(../images/icons/HTMLMessage.png);
+	float: left;
+	margin-right: 4px;
+	}
+
+a.iconGridLargeEditIncomingFeed {
+	background-image: url(../images/icons/rssin.png);
+	}
+
+a.iconGridLargeEditList {
+	background-image: url(../images/icons/EditListLarge.png);
+	}
+
+a.iconGridLargeEditSegment {
+	background-image: url(../images/icons/SegmentLarge.png);
+	}
+
+a.iconGridLargeEditSignup {
+	background-image: url(../images/icons/SignupForms.png);
+	}
+
+a.iconGridLargeSendIncomingFeed {
+	background-image: url(../images/icons/send-rssin.png);
+	}
+
+a.iconGridLargeSurvey {
+	background-image: url(../images/icons/SurveyLarge.png);
+	}
+
+a.iconGridLinkNow {
+	background-image: url(../images/icons/actions_24/deploybylink_24.png);
+	}
+
+a.iconGridList {
+	background-image: url(../images/icons/list.png);
+	}
+	
+a.iconGridListHealth {
+	background-image: url(../images/icons/actions_24/health_24.png);
+	}
+
+a.iconGridPendingInReviewLarge {
+	background-image: url(../images/icons/MessageForSendInReviewLarge.png);
+	}
+
+a.iconGridPendingLarge,
+a.iconSendDraftLarge {
+	background-image: url(../images/icons/MessageForSendLarge.png);
+	}
+
+a.iconNewMessageBuilderLarge {
+	background-image: url(../images/icons/NewMessageBuilderLarge.png);
+	}
+
+a.iconGridPendingSendingLarge {
+	background-image: url(../images/icons/MessageForSendSendingLarge.png);
+	}
+
+a.iconGridPrivateSurvey {
+	background-image: url(../images/icons/PrivateSurvey.png);
+	float: left;
+	margin-right: 4px;
+	}
+
+a.iconGridPublicSurvey {
+	background-image: url(../images/icons/PublicSurvey.png);
+	float: left;
+	margin-right: 4px;
+	}
+
+a.iconGridPublish {
+	background-image: url(../images/icons/actions_24/publish_24.png);
+	}
+	
+a.iconGridPublishDisabled{
+	background-image: url(../images/icons/actions_24/publish_24_disabled.png);
+}
+	
+a.iconGridQuestions {
+	background-image: url(../images/icons/actions_24/question_24.png);
+	}
+
+a.iconGridSendAutoResponder {
+	background-image: url(../images/icons/SendAutoresponder.png);
+	}
+
+a.iconGridSendAutoResponderDisabled {
+	background-image: url(../images/icons/actions_24/disablear_24.png);
+	}
+
+a.iconGridSendAutoResponderEnabled {
+	background-image: url(../images/icons/actions_24/enablear_24.png);
+	}
+
+a.iconGridSendNow {
+	background-image: url(../images/icons/actions_24/sendnow_24.png);
+	}
+
+a.iconGridTestSurvey {
+	background-image: url(../images/icons/actions_24/test_24.png);
+	}
+
+a.iconGridTextMessage {
+	background-image: url(../images/icons/TextMessage.png);
+	float: left;
+	margin-right: 4px;
+	}
+
+a.iconGridUp {
+	background-image: url(../images/icons/actions_24/up_24.png);
+	}
+
+a.iconGridUse {
+	background-image: url(../images/icons/use-template.png);
+	}
+
+a.iconGridUser {
+	background-image: url(../images/icons/user_16.png);
+	}
+
+a.iconGridView,
+a.iconGridViewList {
+	background-image: url(../images/icons/actions_24/srch_24.png);
+	}
+
+a.iconGridViewReports {
+	background-image: url(../images/icons/actions_24/track_24.png);
+	}
+
+a.iconGridX {
+	background-image: url(../images/icons/error_16.png);
+	}
+
+a.iconInvoiceLarge {
+	background-image: url(../images/icons/BillingLarge.png);
+	}
+
+a.iconInvoiceSmall {
+	background-image: url(../images/icons/BillingSmall.png);
+	float: left;
+	margin-right: 4px;
+	}
+
+a.iconMessage {
+	background-image: url(../images/icons/message.png);
+	}
+
+a.iconSegmentDateAdded {
+	background-image: url(../images/icons/SegmentDateAdded.png);
+	}
+
+a.iconSegmentSubscriberField {
+	background-image: url(../images/icons/SegmentCustomFields.png);
+	}
+
+a.iconTrackAllMessagesLarge {
+	background-image: url(../images/icons/TrackAllMessages.png);
+	}
+	
+a.iconTrackOldMessagesLarge {
+	background-image: url(../images/icons/TrackOldMessages.png);
+	}	
+
+a.iconTrackNewMessagesLarge {
+	background-image: url(../images/icons/TrackNewMessages.png);
+	}
+a.iconTrackBlogMessagesLarge {
+	background-image: url(../images/icons/TrackBlogMessages.png);
+	}
+	
+a.iconTrackSplitTestLarge {
+	background-image: url(../images/icons/TrackSplitTest.png);
+	}
+
+a.iconInvoiceSmallNotPaid {
+	background-image: url(../images/icons/BillingSmallNotPaid.png);
+	float: left;
+	margin-right: 4px;
+	}
+
+a.linkLargeTrackImageButton {
+	background-repeat: no-repeat;
+	border: 0;
+	display: block;
+	overflow: hidden;
+	text-indent: -5000px;
+	width: 16px;
+	height: 36px;
+	width: 32px;
+	}
+
+a.linkImageButton,
+a.linkLargeImageButton,
+a.linkSmallImageButton {
+	background-repeat: no-repeat;
+	border: 0;
+	display: block;
+	height: 16px;
+	overflow: hidden;
+	text-indent: -5000px;
+	width: 16px;
+	}
+	a.linkLargeImageButton {
+		height: 32px;
+		width: 32px;
+		}
+	a.linkSmallImageButton,
+	td.tdImageButton a.linkImageButton {
+		height: 24px;
+		width: 24px;
+		}
+
+.addNotification a {
+	font-size: 14px;
+	}
+.addNotification strong {
+	color: #666;	
+	}
+	
+#addToListCheckboxGroup {
+	max-height: 200px;
+	overflow-y: auto;
+	}
+
+.api-appid #app-details {
+	margin-bottom: 20px;
+	}
+
+.api-appid .ContentContainer ul {
+	list-style: none;
+	}
+
+.api-appid #sDescription {
+	width: 400px;
+	height: 50px;
+	}
+
+.api-appid #sName {
+	width: 400px;
+	}
+
+.api-http-example {
+	font-family: "Courier New", Courier, monospace;
+	margin-bottom: 20px;
+	}
+
+.api-select-version {
+	margin: 0;
+	}
+	.api-select-version legend {
+		margin: 0;
+		}
+	.api-select-version .radio {
+		float: left;
+		margin: 0 0 0 15px;
+		position: relative;
+			top: -17px;
+			left: 133px;
+		}
+		.api-select-version .radio input {
+			position: relative;
+			float: left;
+			top: 2px;
+			}
+
+.assist {
+	visibility: hidden;
+	}
+	.assist .divHelpBarContentContainer,
+	.assist .divHelpBarBottom {
+		background-image: url(../images/helpbar_assist.gif);
+		}
+
+#billingInfo {
+	clear: left;
+	margin-bottom: 20px;
+	}
+
+.bulleted {
+	list-style: none;
+	margin: 0 0 20px 30px;
+	}
+	.bulleted li {
+		list-style-image: url(../images/ListBullet.png);
+		}
+
+#buttonBringDownText {
+	margin-top: -10px;
+	}
+	#textInstructions {
+		position: relative;
+		}
+		#textInstructions #buttonBringDownText {
+			margin: 0;
+			position: absolute;
+				top: 5px;
+				right: 100px;
+			}
+
+.campaignFromInfo li {
+	background: url(../images/bg_arrow_campaign.png) no-repeat 10px 0;
+	display: none;
+	font-size: 11px;
+	line-height: 100%;
+	list-style-type: none;
+	padding-left: 30px;
+	padding-top: 4px;
+	}
+	.campaignFromInfo li.hiddenCampaign {
+		display: block;
+		visibility: hidden;
+		}
+
+.campaignFromInfo strong {
+	font-weight: normal;
+	padding-right: 5px;
+	}
+
+.cancelThisMessage img {
+	margin-left: -11px;
+	}
+
+#charLeft .invalid {
+	color: red;
+	}
+
+#closeSpellCheck {
+	background: #fff;
+	border: 4px solid #8CC1DF;
+	color: #005588; 
+	display: none;
+	font-size: 16px;
+	-moz-border-radius: 17px;
+	padding: 8px;
+	position: absolute;
+	right: 15px;
+	z-index: 201;
+	}
+	#closeSpellCheck a {
+		text-decoration: none;
+		}
+
+.contentBox {
+	background: url(../images/bg_contentBox.png) no-repeat;
+	position: relative;
+	margin: 10px 0;
+	width: 352px;
+	}
+	.contentBox h2 {
+		margin: 0;
+		padding: 10px;
+		}
+		.contentBox h2.icon {
+			background: url(../images/icons/bg_icons_home.png) no-repeat 10px 10px;
+			padding-left: 42px;
+			}
+
+.contentBoxBottom {
+	background: url(../images/bg_contentBox.png) no-repeat -704px 100%;
+	clear: both;
+	font-size: 1px; /* fixes height bug in IE 6 */
+	height: 9px;
+	margin: 0 -10px;
+	}
+	.contentBoxWide .contentBoxBottom {
+		margin-left: -20px;
+		margin-right: -20px;
+		}
+		.home .contentBoxWide .contentBoxBottom {
+			margin-left: -10px;
+			margin-right: -10px;
+			}
+
+.contentBoxMiddle {
+	background: url(../images/bg_contentBox.png) repeat-y -352px 0;
+	padding: 0 10px;
+	}
+	div.ContentContainer .contentBoxMiddle p {
+		margin-right: 0;
+		}
+		.home div.ContentContainer .contentBoxMiddle p {
+			margin-bottom: 5px;
+			}
+
+.contentBoxWide {
+	background: url(../images/bg_contentBox.png) no-repeat -1056px 0;
+	width: 715px;
+	}
+	.contentBoxWide .contentBoxMiddle {
+		background-position: -1771px 0;
+		padding-left: 20px;
+		padding-right: 20px;
+		}
+		.home .contentBoxWide .contentBoxMiddle {
+			padding-left: 10px;
+			padding-right: 10px;
+			}
+	.contentBoxWide h2 {
+		padding: 13px 20px 10px;
+		}
+	.contentBoxWide .contentBoxBottom {
+		background-position: -2486px 100%;
+		}
+
+.data {
+	clear: both;
+	margin: 0 0 20px;
+	}
+	.data .paginationControl li {
+		float: left;
+		margin: 0 0 0 8px;
+		padding: 0;
+		}
+	.data .paginationControl p {
+		margin: 0;
+		text-align: right;
+		}
+	.data .paginationControl ul {
+		float: right;
+		list-style: none;
+		margin: 0 0 20px;
+		padding: 0;
+		}
+	.data .paginationLimit {
+		text-align: right;
+		}
+		.data .paginationLimit select,
+		.data .paginationLimit input {
+			display: inline;
+			margin-bottom: 0;
+			}
+	.data .tableDataGrid {
+		margin-bottom: 8px;
+		}
+
+div.adminOnly {
+	border: 1px solid #EB6515;
+	clear: left;
+	float: left;
+	margin: 10px 0 0;
+	padding: 10px;
+	width: 678px;
+	}
+	div.adminOnly #sFooter {
+		display: inline;
+		margin-right: 1em;
+		width: auto;
+		}
+
+div.Column,
+div.LeftAlign {
+	float: left;
+	}
+		
+#divContactsPagingBottom a,
+#divContactsPagingTop a,
+#divMessagesPagingBottom a,
+#divMessagesPagingTop a,
+#pagination a,
+#pagingBottom a {
+	text-decoration: none;
+	}
+	
+div.Container {
+	clear: both;
+	}
+
+div.ContentContainer {
+	display: inline;
+	float: right;
+	margin-right: 27px;
+	width: 710px;
+	}
+	div.ContentContainer p {
+		margin-bottom: 20px;
+		margin-right: 20px;
+		}
+	div.ContentContainer .selected {
+		background-color: #DEF;
+		}
+	div.ContentContainer span.navlink {
+		font-size: 14px;
+		margin-left: 10px;
+	}	
+
+#divContentFrame {
+	background: #fff;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+	clear: both;
+	display: inline;
+	float: left;
+	position: relative;
+	padding-top: 10px;
+	width: 760px;
+	}
+	
+div.dependantFeature {
+	padding-left: 20px;
+	}
+
+div#divDiffHelp {
+	border: 1px solid #BBB;
+	background-color: #FFE;
+	font-size: 10px;
+	margin: 0 0 5px 5px;
+	padding: 2px 2px 2px 5px;
+	}
+	div#divDiffHelp h3 {
+		font-size: 13px;
+		}
+
+div.divHomeWelcomeMessage {
+	margin-top: 10px;
+	width: 90%;
+	}
+
+div#divHTMLQuickSaveResult,
+div#divReturnPathResult,
+div#divSendTestResult,
+div#divTextQuickSaveResult {
+	color: #EF0000;
+	}
+
+div#divSendTestMessage,
+#saveReturnPath {
+	background-color: #FFE;
+	border: 1px solid #BBB;
+	padding: 10px 10px 5px 10px;
+	margin: 0 auto;
+	width: 65%;
+	}
+	div#divSendTestMessage input {
+		display: inline;
+		margin-right: 8px;
+		}
+	div#divSendTestMessage label {
+		background: url(../images/icons/TestMessage.png) no-repeat;
+		color: #264978;
+		font-size: 18px;
+		margin-top: 0;
+		padding: 5px 0 9px 41px;
+		}
+	#saveReturnPath {
+		background-color: #FFFFFF;
+		border-color: #EF0000;
+		margin-bottom: 20px;
+		}
+		#saveReturnPath legend {
+			color: #EF0000;
+			font-weight: normal;
+			}
+
+div#divStaticContent ul,
+div#PartnerAgreement ul,
+div#RecommendedPromo ul {
+	margin-left: 40px;
+	margin-bottom: 20px;
+	}
+	div#divStaticContent ul li,
+	div#PartnerAgreement ul li,
+	div#RecommendedPromo ul li {
+		list-style-image: url(../images/ListBullet.png);
+		margin-bottom: 10px;
+		width: 480px;
+		}
+
+div#divSubmitButton {
+	float: right;
+	margin-right: 40px;
+	}
+
+div#divUtility {
+	background-color: #FFF;
+	border: 1px solid #999;
+	height: 25px;
+	margin: 5px auto;
+ 	width: 760px;
+	}
+
+.feature {
+	margin: 15px 0;
+	}
+
+#divFooterFrame {
+	border-top: 5px solid #269;
+	clear: both;
+	font-size: 11px;
+	line-height: 100%;
+	width: 762px;
+	}
+	#divFooterFrame a {
+		display: block;
+		float: left;
+		padding: 2px 0 4px 20px;
+		text-decoration: none;
+		white-space: nowrap; /* IE */
+		}
+		#divFooterFrame a:hover {
+			text-decoration: underline;
+			}
+	#divFooterFrame li {
+		background: url(../images/icons/bg_icons_16.png) no-repeat 0 -120px;
+		display: inline; /* IE6 */
+		float: left;
+		margin: 0 20px 0 0;
+		}
+		#divFooterFrame #liAntiSpamPolicy {
+			background-position: 0 -168px;
+			}
+		#divFooterFrame #liGiveUsFeedback {
+			background-position: 0 -216px;
+			}
+		#divFooterFrame #liLicenseAgreement {
+			background-position: 0 -192px;
+			}
+		#divFooterFrame #liProhibitedContent {
+			background-position: 0 -144px;
+			}
+	#divFooterFrame ul {
+		display: inline; /* IE6 */
+		float: left;
+		list-style: none;
+		position: relative; /* IE */
+		padding: 5px 0 10px 30px;
+		}
+
+.divHelpBarBottom {
+	background: url(../images/helpbar.gif) no-repeat 0 100%;
+	height: 7px;
+	width: 175px;
+	}
+
+.divHelpBarContentContainer {
+	background: url(../images/helpbar.gif) no-repeat;
+	padding: 10px;
+	width: 155px;
+	}
+	.divHelpBarContentContainer h2 {
+		font-size: 17px;
+		line-height: 100%;
+		}
+		.divHelpBarContentContainer h2 a {
+			text-decoration: none;
+			}
+	.divHelpBarContentContainer ol {
+		padding-left: 23px;
+		}
+	.divHelpBarContentContainer p {
+		color: #000;
+		font-size: 11px;
+		line-height: 135%;
+		margin: 0 0 15px 0;
+		}
+
+#divHelpBarFrame {
+	display: none !important;
+	overflow: hidden;
+	position: absolute;
+		right: 0;
+		top: 10px;
+	visibility: hidden;
+	width: 175px;
+	z-index: 999;
+	}
+	#divHelpBarFrame.assist {
+		display: block !important;
+		}
+
+#divHelpBarSliverContent {
+	padding: 10px 10px 10px 30px;
+	}
+
+#divHelpBarSliverFrame {
+	display: none !important;
+	float: right;
+	margin: 0 0 0 -21px;
+	overflow: hidden;
+	position: relative;
+		right: 0;
+	width: 21px;
+	z-index: 10;
+	}
+	#divHelpBarSliverFrame.assist {
+		display: block !important;
+		}
+
+div.hr {
+	border-bottom: 1px solid #269;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	}
+
+div#HTMLInstructions {
+	float: left;
+	}
+
+div#HTMLQuickSave, 
+div#HTMLSpellCheck {
+	float: right;
+	margin-top: -20px;
+	}
+div#HTMLSpellCheck {
+	display: none;
+	}
+div.largeSelectionBoxBottom {
+	background: url(../images/largeSelectionBoxBottom.png) no-repeat;
+	clear: both;
+	font-size: 1px;
+	height: 29px;
+	width: 680px;
+	}
+    body.sendConfirmation div.largeSelectionBoxBottom {
+        background:#fdfdf6;
+        border:1px solid #ccc;
+        border-width:0 1px 1px 1px;
+        margin-left:1px;
+        margin-bottom:10px;
+        width:707px;
+        }
+div.largeSelectionBoxMiddle {
+	background: url(../images/largeSelectionBoxMiddle.png) repeat-y;
+	float: left;
+	width: 680px;
+	}
+    body.sendConfirmation div.largeSelectionBoxMiddle {
+        background:#fdfdf6;
+        border:1px solid #ccc;
+        border-width:0 1px;
+        width:707px;
+        }
+
+div.largeSelectionBoxTop {
+	background: url(../images/largeSelectionBoxTop.png) no-repeat;
+	margin-top: 5px;
+	padding-top: 5px;
+	position: relative;
+	width: 680px;
+	}
+	div.largeSelectionBoxTop h3 {
+		margin-left: 70px;
+		margin-bottom: 0;
+		}
+    body.sendConfirmation div.largeSelectionBoxTop {
+        background:#fdfdf6;
+        border:1px solid #ccc;
+        border-width:1px 1px 0 1px;
+        width:708px;
+        }
+	
+div.largeSelectionBoxTopMediumIcon {
+	margin-top: 15px;
+	}
+	div.largeSelectionBoxTopMediumIcon h3 {
+		margin-left: 45px;
+		padding-bottom: 20px;
+		}
+
+div.LeftColumn,
+fieldset.LeftColumn {
+	float: left;
+	margin-right: 30px;
+	width: 45%;
+	}
+	div#TextInstructions div.LeftColumn {
+		margin-right: 10px;
+		width: 58%;
+		}
+
+#divLiveHelp {
+	clear: both;
+	margin: 0 auto;
+	width: 225px;
+	}
+	#divLiveHelp img {
+		cursor: pointer;
+		}
+
+#divMainCol {
+	border-top: 10px solid #269;
+	margin: 0 auto;
+	width: 762px;
+	}
+
+div.medSelectionBoxBottom {
+	background: url(../images/medSelectionBoxBottom.png) no-repeat;
+	clear: both;
+	font-size: 1px;
+	height: 22px;
+	margin: 0;
+	padding-bottom: 10px;
+	width: 388px;
+	}
+
+div.medSelectionBoxMiddle {
+	background: url(../images/medSelectionBoxMiddle.png);
+	width: 388px;
+	}
+
+div.medSelectionBoxTop {
+	background: url(../images/medSelectionBoxTop.png) no-repeat;
+	margin-top: 5px;
+	padding-top: 5px;
+	position:relative;
+	width: 388px;
+	}
+	div.medSelectionBoxTop input,
+	div.smallSelectionBoxTop input {
+		float: left;
+		margin-left: 5px;
+		}
+		.sendBlog div.medSelectionBoxTop input {
+			margin-bottom: 0;
+			}
+	div.medSelectionBoxTop h3,
+	div.smallSelectionBoxTop h3 {
+		margin-left: 45px;
+		padding-bottom: 20px;
+		width: 190px;
+		}
+		.sendBlog div.medSelectionBoxTop h3 {
+			margin-left: 57px;
+			}
+	div.medSelectionBoxTop label,
+	div.smallSelectionBoxTop label {
+		float: left;
+		margin-top: 0;
+		padding-left: 5px;
+		}
+		div.medSelectionBoxTop label {
+			width: 150px;
+			}
+			.sendBlog div.medSelectionBoxTop label {
+				margin-bottom: 0;
+				width: auto;
+				}
+
+.divMessage, /* Note: moving forward, we should use .messageBox or .noticeBox instead of .divMessage */
+div.messageBox {  /* Note that messageBox should always be used with one of the supplementary classes below */
+	background-image: url(../images/icons/bg_icons_messageBox.png);
+	background-position: 15px 50%;
+	background-repeat: no-repeat;
+	border: 1px solid #BBB;
+	clear: left;
+	color: #555;
+	font-size: 16px;
+	margin: 10px 2.5% 15px;
+	padding: 15px 10px 15px 22px;
+	width: 90%;
+	}
+	div.divAccountErrorMessage,
+	div.messageBox.accountIssueMessageBox {
+		background-color: #fee;
+		}
+	div.divAccountWarningMessage,
+	div.divWarningMessage,
+	div.messageBox.warningMessageBox {
+		background-color: #ffd;
+		background-position: -2969px 50%;
+		}
+	div.divErrorMessage,
+	div.messageBox.errorMessageBox {
+		background-color: #fee;
+		background-position: -731px 50%;
+		}
+	div.divInfoMessage,
+	div.messageBox.infoMessageBox {
+		background-color: #ffe;
+		background-position: -1477px 50%;
+		}
+	div.messageBox.notificationMessageBox {
+		position: relative;
+		}
+		div.messageBox.notificationMessageBox .closeButton{
+			background: url(../images/icons/close_16.png) no-repeat;
+			border: 0;
+			cursor: pointer;
+			height: 16px;
+			position: absolute;
+				right: 10px;
+				top: 10px;
+			width: 16px;
+			}
+			div.messageBox.notificationMessageBox .closeButton span{
+				position: relative;
+					left: -9999px;
+				}
+	div.divSuccessMessage,
+	div.messageBox.successMessageBox {
+		background-color: #efe;
+		background-position: -2223px 50%;
+		}
+	.divMessage ol,
+	.divMessage ul.ulMessage,
+	div.messageBox ol,
+	div.messageBox ul {
+		margin-left: 55px;
+		}
+	.divMessage p.pMessage,
+	div.messageBox p {
+		font-weight: bold;
+		margin-bottom: 0;
+		margin-left: 40px;
+		}
+		div.messageBox p.notFirstParagraph {
+			margin-top: 15px;
+			}
+
+div.RightColumn,
+fieldset.RightColumn {
+	float: left;
+	width: 47%;
+	}
+	div#TextInstructions div.RightColumn {
+		width: 30%;
+		}
+
+div.smallSelectionBoxBottom {
+	background: url(../images/smallSelectionBoxBottom.png) no-repeat;
+	clear: both;
+	font-size: 1px;
+	height: 12px;
+	margin: 0;
+	padding-bottom: 10px;
+	width: 270px;
+	}
+
+div.smallSelectionBoxMiddle {
+	background: url(../images/smallSelectionBoxMiddle.png);
+	width: 270px;
+	}
+
+div.smallSelectionBoxTop {
+	background: url(../images/smallSelectionBoxTop.png) no-repeat;
+	margin-top: 5px;
+	padding-top: 5px;
+	position: relative;
+	width: 270px;
+	}
+
+#divTabMenu	{
+	background: #fff;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+	float: left;
+	font-family: 'Trebuchet MS', 'Nimbus Sans L', Arial, Helvetica, sans-serif;
+	padding-top: 10px;
+	}
+	#divTabMenu li {
+		float: left;
+		}
+	#divTabMenu ul {
+		float: left;
+		clear: both;
+		list-style-type: none;
+		}
+		#divTabMenu ul.menuRight {
+			clear: right;
+			float: right;
+			}
+			#divTabMenu ul.menuRight a {
+				display: block;
+				margin: 0 15px 0 0;
+				padding: 0 0 0 20px;
+				text-decoration: none;
+				vertical-align: top;
+				}
+				#divTabMenu ul.menuRight a:hover {
+					text-decoration: underline;
+					}
+			#divTabMenu ul.menuRight li {
+				background: url(../images/icons/bg_icons_16.png) no-repeat 0 -24px;
+				font-size: 12px;
+				line-height: 16px;
+				}
+				#divTabMenu ul.menuRight #liAccountSettings {
+					background-position: 0 -72px;
+					}
+				#divTabMenu ul.menuRight #liLogout {
+					background-position: 0 -96px;
+					}
+				#divTabMenu ul.menuRight #liUpgrade {
+					background-position: 0 -48px;
+					}
+		#divTabMenu ul.SubMenu {
+			display: none;
+			background: url('../images/bg_tabs.png') repeat-x 0 -1010px;
+			height: 38px;
+			vertical-align: bottom;
+			width: 760px;
+			}
+			#divTabMenu ul.SubMenu a {
+				border-right: 1px solid #5A9ABA;
+				color: #058;
+				display: block;
+				float: left;
+				height: 23px;
+				padding: 8px 10px 4px 38px;
+				text-decoration: none;
+				}
+				#divTabMenu ul.SubMenu #liBrowseContacts a {
+					padding-left: 42px;
+					}
+			#divTabMenu ul.SubMenu li {
+				background: url(../images/bg_tabs.png) no-repeat 5px 4px; /* See globalIE6.css */
+				}
+				#divTabMenu ul.SubMenu li:hover {
+					background-color: #DEF;
+					}
+				#divTabMenu ul.SubMenu #liAddContacts {
+					background-position: 5px -33px;
+					}
+				#divTabMenu ul.SubMenu #liBrowseContacts {
+					background-position: 5px -72px;
+					}					
+				#divTabMenu ul.SubMenu #liImageLibrary {
+					background-position: 5px -374px;
+					}
+				#divTabMenu ul.SubMenu #liManageMessages {
+					background-position: 5px -225px;
+					}
+				#divTabMenu ul.SubMenu #liManageResponders {
+					background-position: 5px -337px;
+					}
+				#divTabMenu ul.SubMenu #liManageSegments {
+					background-position: 5px -147px;
+					}					
+				#divTabMenu ul.SubMenu #liManageSurveys {
+					background-position: 5px -299px;
+					}
+				#divTabMenu ul.SubMenu #liPendingMessages {
+					background-position: 5px -519px;
+					}
+				#divTabMenu ul.SubMenu #liRSSInfeeds {
+					background-position: 5px -261px;
+					}
+				#divTabMenu ul.SubMenu #liSearchContacts {
+					background-position: 5px -108px;
+					}
+				#divTabMenu ul.SubMenu #liSendAutoresponders {
+					background-position: 5px -481px;
+					}
+				#divTabMenu ul.SubMenu #liSendMessages {
+					background-position: 5px -407px;
+					}
+				#divTabMenu ul.SubMenu #liSendSurveys {
+					background-position: 5px -444px;
+					}
+				#divTabMenu ul.SubMenu #liSettingsAccount {
+					background-position: 5px -741px;
+					}
+				#divTabMenu ul.SubMenu #liSettingsCommunity {
+					background-position: 5px -901px;
+					}
+				#divTabMenu ul.SubMenu #liSettingsCustomFields {
+					background-position: 5px -861px;
+					}
+				#divTabMenu ul.SubMenu #liSettingsProfile {
+					background-position: 5px -782px;
+					}
+				#divTabMenu ul.SubMenu #liSettingsSendOptions {
+					background-position: 5px -821px;
+					}
+				#divTabMenu ul.SubMenu #liSignups {
+					background-position: 5px -186px;
+					}
+				#divTabMenu ul.SubMenu #liTrackAutoResponders {
+					background-position: 5px -664px;
+					}
+				#divTabMenu ul.SubMenu #liTrackDashboard {
+					background-position: 5px -702px;
+					}
+				#divTabMenu ul.SubMenu #liTrackLastMessage {
+					background-position: 5px -554px;
+					}
+				#divTabMenu ul.SubMenu #liTrackMessages {
+					background-position: 5px -590px;
+					}
+				#divTabMenu ul.SubMenu #liTrackSurveys {
+					background-position: 5px -626px;
+					}
+				#divTabMenu ul.SubMenu .selected,
+				#divTabMenu ul.SubMenu .selected:hover {
+					background-color: #DED;
+					}
+		#divTabMenu ul.Selected { /* Intentionally mis-alphabetized */
+			display: block;
+			}
+		#divTabMenu ul#ulHelpBtns,
+		#divTabMenu #helpMenu {
+			margin: 0;
+			padding: 0;
+			position: absolute;
+				bottom: 2px;
+				right: 10px;
+			list-style-type: none;
+			}
+			#divTabMenu ul#ulHelpBtns li,
+			#divTabMenu #helpMenu li {
+				margin: 0;
+				padding: 0;
+				}
+				#divTabMenu ul#ulHelpBtns li#liHelpButton,
+				#divTabMenu #helpMenu #helpButton {
+					margin-right: 2px;
+					}
+		#divTabMenu ul.ulMainMenu {
+			padding-left: 10px;
+			}
+			#divTabMenu ul.ulMainMenu a {
+				background: #058 url('../images/bg_tabs.png') no-repeat 0 -1067px; /* See globalIE6.css */
+				color: #fff;
+				display: block;
+				padding-bottom: 11px;
+				position: relative;
+				text-decoration: none;
+				white-space: nowrap;
+				}
+				#divTabMenu ul.ulMainMenu a:hover {
+					margin-top: -3px;
+					padding-bottom: 14px;
+					}
+				#divTabMenu ul.ulMainMenu .selected a,
+				#divTabMenu ul.ulMainMenu .selected a:hover {
+					background-color: #48B;
+					font-size: 18px;
+					margin-top: -4px;
+					padding-bottom: 15px;
+					}
+				#divTabMenu ul.ulMainMenu a span {
+					display: block;
+					background: url('../images/bg_tabs.png') no-repeat 100% -1120px; /* See globalIE6.css */
+					padding: 13px 25px 0;
+					}
+			#divTabMenu ul.ulMainMenu li {
+				font-size: 16px;
+				line-height: 100%;
+				margin: 0 5px 0 0;
+				padding: 0;
+				position: relative;
+				}
+
+div#TextFunctions {
+	margin-left: 300px;
+	}
+	
+div.tooltip {
+	background-color: #ffffae;
+	border: 1px solid #555;
+	color: #000;
+	font-size: 12px;
+	max-width: 350px;
+	padding: 1px 3px;
+	position: absolute;
+	text-indent: 0;
+	}
+
+dfn.dfnExample {
+	color: #666;
+	}
+
+#enableApiApplication h2 {
+	margin: 10px 0 0;
+	}
+
+fieldset#requireConfirmation input {
+	float: left;
+	margin: 0;
+	}
+fieldset#requireConfirmation label {
+	display: inline;
+	margin: 0 0 0 5px;
+	}
+
+#filterInvoices {
+	border: 1px solid #fff; /* IE 6/7 */
+	}
+	#filterInvoices fieldset {
+		float: left;
+		margin: 0 15px 0 0;
+		}
+	#filterInvoices #iFormClientFolderId {
+		width: 140px;
+		}
+	#filterInvoices .submit {
+		float: left;
+		margin: -3px 0 0;
+		}
+
+#formAREdit #textareaARDesc,
+#formAREdit #textinputARName,
+#formAREdit #textareaARFromName,
+#formAREdit #textareaARFromAddress {
+	width: 300px;
+	}
+
+#formMessageCampaign label {
+	margin-top: 0;
+	float: left;
+	}
+#formMessageCampaign select {
+	display: inline;
+	}
+#formMessageCampaign .pagination {
+	float: right;
+	}
+
+.helpLink {
+	float: left;
+	font-family: 'Trebuchet MS', 'Nimbus Sans L', Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	margin: 6px 0 0 10px;
+	}
+	.helpLink a,
+	.helpLink a:visited {
+		color: #EC8D00;
+		}
+	.helpLink.pasteFromWord {
+			margin-left: 0;
+			padding-bottom: 10px;
+		}
+
+.hidden {
+	visibility: hidden;
+	}
+
+.imageLibraryPagination{
+	padding-top: 18px;
+	}
+
+#imgLogo {
+	float: left;
+	clear: left;
+	margin: 0 15px 15px 15px;
+	}
+
+#imgSelectionBoxIconLarge {
+	display: block;
+	position:absolute;
+		left:-15px;
+		top:-5px;
+	}
+
+#imgSelectionBoxIcon {
+	position:absolute;
+		left:-15px;
+		top:-12px;
+	}
+
+input#textinputTags {
+	width: 300px;
+	}
+
+li.liFormFieldError {
+	color: #f00;
+	font-style: italic;
+	}
+
+.linkMinimizeHelpBar {
+	background: url(../images/icons/minimize_16.png) no-repeat;
+	display: block;
+	float: right;
+	height: 16px;
+	position: relative;
+	text-indent: -5000px;
+	width: 16px;
+	}
+
+#linkShowHelpBar {
+	background: url(../images/icons/helparrow.png) no-repeat;
+	display: block;
+	height: 57px;
+	position: absolute;
+		left: 2px;
+		top: 10px;
+	text-indent: -5000px;
+	width: 20px;
+	}
+
+#linkStopHelpSequence {
+	background: url(../images/icons/close_16.png) no-repeat;
+	display: block;
+	float: right;
+	height: 16px;
+	position: relative;
+	margin-left: 3px;
+	text-indent: -5000px;
+	width: 16px;
+	}
+
+.login {
+	margin: 8px;
+	}
+	.login fieldset{
+		background: #fff;
+		border: 1px solid #003365;
+		margin: 0 auto;
+		padding: 0 0 5px;
+		width: 227px;
+		}
+	.login h1 {
+		background: #1676A9;
+		color: #fff;
+		font: normal 10px/14px Verdana, Arial, Helvetica, sans-serif;
+		margin: 0 0 5px;
+		padding: 5px 10px;
+		text-align: center;
+		}
+	.login input {
+		float: left;
+		font-size: 11px;
+		margin-bottom: 0;
+		}
+		.login input.password,
+		.login input.text {
+			width: 104px;
+			}
+			.login input.password {
+				margin-right: 10px;
+				}
+			.login input.text {
+				margin-bottom: 10px;
+				}
+	.login label {
+		float: left;
+		font-size: 10px;
+		margin: 3px 10px 0 5px;
+		text-align: right;
+		width: 52px;
+		}
+	.login p {
+		font-size: 10px;
+		margin: 0 5px 10px;
+		text-align: center;
+		}
+
+#navContainer {
+	border-bottom: 9px solid #48b;
+	float: left;
+	position: relative;
+	width: 760px;
+	}
+
+.noDisplay {
+	display: none;
+	}
+
+.noticeContactBox {
+	background-color: #FFE;
+	border: 1px solid #BBB;
+	float: left;
+	margin: 0 0 20px;
+	padding: 2px 2px 2px 5px;
+	width: 36%;
+	}
+	div.noticeContactBox p {
+		margin: 0;
+		padding: 0;
+		}
+		.noticeContactBox .footnote {
+			margin: 8px 0;
+			}
+
+.noticeContentColumn {
+	float: left;
+	width: 60%;
+	}
+	
+.noticeContentHeader {
+	margin: 10px 0 20px;
+	}
+
+.notificationTemporary {
+	background: #ffc;
+	border: 1px solid #aaa;
+	margin: 5px 0;
+	padding: 3px;
+	}
+
+.noWrap {
+	white-space: nowrap;
+	}
+
+ol.HelpSequence li {
+	color: #a6a6a6;
+	}
+	ol.HelpSequence li.CurrentStep,
+	p.LastStep {
+		color: #000;
+		margin: 4px 0;
+		}
+		p.LastStep a {
+			display: block;
+			font-weight: bold;
+			margin: 10px 0;
+			}
+
+.pagination a {
+	text-decoration: none;
+	}
+
+#pendingMessagesRefresh {
+        color: #555;
+        float: right;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        margin: 6px 0 0 0;
+        }
+
+p.pInstructions {
+	margin-bottom: 0;
+	}
+
+p.pNoItems {
+	background-image: url(../images/icons/NoMessages.png);
+	background-repeat: no-repeat;
+	text-indent: 20px;
+	}
+	p.pNoItems a {
+		font-weight: bold;
+		}
+
+.required .indicator {
+	color: #c00;
+	}
+
+#sctDay,
+#sctHour,
+#sctMeridian,
+#sctMinute {
+	width: 4em;
+	}
+
+#sctMonth {
+	width: 8em;
+	}
+
+#sctYear {
+	width: 5em;
+	}
+
+select.dayMenu,
+select.monthMenu {
+	margin-right: 5px;
+	width: 4em;
+	}
+select.yearMenu {
+	width: 5em;
+	}
+
+span.SmallDate {
+	font-size: 10px;
+	}
+
+#splitTestingContainer dfn {
+	text-align: center;
+	}
+#splitTest {
+	padding: 10px;
+	margin-bottom: 30px;
+	}
+#splitTestNote {
+    color: #444;
+    position: relative;
+    top:15px;
+    border-top: 1px solid #BBB;
+    border-bottom: 1px solid #BBB;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    }	
+#splitTestingContainer td {
+	padding: 2px 10px 2px;
+	width: 120px;
+	}
+	#splitTestingContainer td input {
+		margin: 0;
+		padding: 0;
+        width: 120px;
+        float: left;
+		}
+	#splitTestingContainer td select {
+		margin: 0 5px 0 0;
+		padding: 0;
+		width: 90px;
+		float: left;
+		}
+#splitTestingContainer th {	
+	text-align: left;
+	vertical-align: top;
+	padding-left: 10px;
+}
+
+.percentage {
+	font-size: 16px;
+}
+#slider_ticks {
+	margin-left: 3px;
+	height: 30px;
+	background: url(../images/slider_tick_marks.png) 50% 50% no-repeat;
+}
+#splitTestingContainer #slider {
+	margin: 0 auto;
+	width: 400px;
+	}
+#splitTestingContainer #typeOptions {
+	display: block;
+	}
+	#splitTestingContainer #typeOptions input {
+		display: inline;
+		margin-left: 10px;
+		}
+	#splitTestingContainer #typeOptions label {
+		display: inline;
+		}
+
+#steps {
+	background: #FEFEEE;
+	border: 1px solid #BBB;
+	float: right;
+	font-size: 11px;
+	margin: 3px 0 0;
+	padding: 0 2px 2px;
+	}
+
+#submitbuttonFilterByDate {
+	margin-top: 16px;
+	}
+
+table.tableDataGrid,
+table.tableStatGrid {
+	border-left: 1px solid #269;
+	border-right: 1px solid #269;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	width: 100%;
+	}
+	table.tableStatGrid {
+		margin-bottom: 0;
+		margin-top: 0;
+		width: 710px;
+	 	}
+	table.tableDataGrid a,
+	table.tableStatGrid a {
+		text-decoration: none;
+		}
+	table.tableDataGrid tfoot {
+		border-top: 2px solid #269;
+		}
+		table.tableDataGrid tfoot td {
+			background-color: #e8eff5;
+			}
+	table.tableDataGrid td,
+	table.tableStatGrid td,
+	th {
+		padding: 4px;
+		}
+		table.tableDataGrid th,
+		table.tableStatGrid th {
+			background-color: #269;
+			border-bottom: 1px solid #269;
+			border-top: 1px solid #269;
+			color: #FFF;
+			font-size: 12px;
+			font-weight: bold;
+			text-align: left;
+			}
+			table.tableDataGrid th a,
+			table.tableStatGrid th a {
+				color: #FFF;
+				}
+		th.thColumnTitle {
+			padding-right: 15px;
+			white-space: nowrap;
+			}
+		table.tableDataGrid th.thNumberColumnTitle {
+			padding-right: 15px;
+			text-align: right;
+			white-space: nowrap;
+			}
+
+td.tdImageButton,
+td.tdLargeImageButton,
+td.tdSmallImageButton {
+	border-right: 0;
+	height: 30px;
+	text-align: center;
+	width: 16px;
+	}
+	td.tdLargeImageButton {
+		height: 40px;
+		width: 28px;
+		}
+		td.tdLargeImageButton img {
+			margin-top: 2px;
+			}
+	td.tdSmallImageButton {
+		height: 28px;
+		width: 20px;
+		}
+	td.tdImageButton img {
+		margin-left: 4px;
+		}
+
+table.tableDataGrid td.tdNumberColumn {
+	padding-right: 8%;
+	text-align: right;
+	}
+
+table.partnerList {
+	margin: 10px 0;
+	}
+
+td.tdPercentColumn {
+	text-align: right;
+	}
+
+.partnerList td {
+	padding: 10px 0;
+	}
+
+.partnerList th {
+	padding: 0;
+	text-align: left;
+	}
+
+textarea#text_body, textarea#html_body {
+	width: 715px;
+	}
+
+.thickbox {
+	background-color: #FFFFFF;
+	border: 2px solid #FA6300;
+	display: none;
+	margin-left: -15px;
+	padding: 8px 20px 0;
+	position: absolute;
+		left: 50%;
+		top: 50%;
+	width: 724px;
+	z-index: 999;
+	}
+	.thickbox .close {
+		background: url(../images/buttons/close.png) no-repeat;
+		display: block;
+		height: 16px;
+		position: absolute;
+			right: 8px;
+			top: 8px;
+		text-indent: -9999px;
+		width: 16px;
+		}
+		
+	.thickbox #thickboxContentCC {
+		width: 400px;
+		}
+	
+	.thickbox#thickboxCvv {
+		width: 500px;
+		}
+	
+#thickboxLoad {
+	display: none;
+	height: 13px;
+	margin: -6px 0 0 -104px;	
+	position: fixed;
+		left: 50%;
+		top: 50%;
+	width: 208px;
+	z-index: 999;
+	}
+
+#thickboxMask {
+	background-color: #fff;
+	border: none;
+	height: 100%;
+	opacity: 0;	
+	position: fixed;
+		left: 0;	
+		top: 0;
+	width: 100%;
+	z-index: 998;	
+	}
+
+#thickboxOverlay {
+	background: url(../images/thickbox_bg_overlay.png);
+	height: 100%;	
+	position: fixed;
+		left: 0;
+		top: 0;
+	width: 100%;
+	z-index: 998;
+	}
+
+tr.doNotContact {
+	background: #FFE5E5;
+	}
+	
+tr.history {
+	background: #F0F7FC;
+	}	
+	
+tr.pending {
+	background: #FFFFE8;
+	}
+	
+tr.subscribed {
+	background: #E9F6E9;
+	}	
+
+tr.trDataGridAltRow td {
+	background-color: #fffbf7;
+	border-bottom: 1px solid #269;
+	border-right: 0;
+	}
+
+tr.trDataGridRow td {
+	background-color: #FFF;
+	border-bottom: 1px solid #269;
+	border-right: 0;
+	}
+	
+tr.unsubscribed {
+	background: #F0F0F0;
+	}
+
+ul#ulAjaxErrors {
+	margin-top: 0;
+	}
+
+#viewportMessages {
+	margin: 40px 2% 0 2%;
+	position: fixed;
+		top: 0;
+	width: 96%;
+	z-index: 1000;
+	}
+
+.visitTracking {
+	height: 1px;
+	width: 1px;
+	}
+
+.warningMessageText {
+	color: #f00;
+	}
+
+/* Widget Dashboard styles */
+
+
+
+.widget {
+	background-color: #fff;
+	border: 1px solid #333;
+	margin-bottom: 10px;
+	}
+	.widget .widgetContent {
+		padding: 2px 5px;
+		}
+	.widget .widgetTitlebar {
+		background-color: #ccc;
+		cursor: move; 
+		border-bottom: 1px solid #333;
+		padding: 2px 5px;
+		}
+
+.widgetAlreadyAdded {
+		background-color: #F0F0F0;
+	}
+	.widgetAlreadyAdded p.widgetAddedCount {
+		clear: right;
+		font-size: 10px;
+		margin: 0;
+	}
+
+.widgetConfig {
+	position: absolute;
+	width: 350px;
+	background-color: #fff;
+	border: 1px solid #000;
+	}
+	.widgetConfig .ui-dialog-titlebar-close {
+		background-image: url(../images/icons/close_16.png);
+		cursor: pointer;
+		height: 16px;
+		position: absolute;
+			right: 0;
+			top: 0;
+		text-indent: -9999px;
+		width: 16px;
+		}
+
+.widgetColumn {
+	float: left;
+	padding-bottom: 100px;
+	width: 350px;
+	}
+.widgetColumn-0 {
+	margin-right: 10px;
+	}
+
+.widgetContainer {
+	float: left;
+	}
+	
+.widgetInfo {
+		float: left;
+		list-style: none;
+		padding-top: 5px;
+		width: 100%;
+	}
+	.widgetInfo .widgetAdd {
+			float: right;
+			margin-top: 10px;
+			margin-right: 20px;
+		}
+	.widgetInfo .widgetAdd input {
+			margin-bottom: 2px;
+		}
+	.widgetInfo h3 {
+			margin-left: 50px;
+		}
+	.widgetInfo img {
+			float: left;
+			margin-left: 4px;
+			width: 40px;
+		}
+	.widgetInfo p {
+			margin-left: 50px;
+		}
+
+.widgetInfoList {
+		float: left;
+		margin-bottom: 20px;
+		width: 100%;
+	}
+
+/* Page-specific styles */
+
+/* accountLockout.css --> account/lockout.tpl */
+.month,
+.year {
+	display: inline; /* goes away when display: block is removed from inputs above */
+	width: 20px;
+	}
+	.year {
+		width: 40px;
+		}
+
+/* accountUpgrade.css --> account/confirm.tpl, account/done.tpl */
+#choose_creditcard {
+	clear: both;
+	margin: 10px 0 5px;
+	}
+
+.cvv {
+	margin: 0 5px 0 10px;
+	}
+	.cvv input {
+		float: right;
+		margin: 0;
+		}
+	.cvv label {
+		clear: left;
+		float: left;
+		margin: 0;
+		}
+
+div.divCC {
+	float: left;
+	margin-left: 10px;
+	width: 250px;
+	}
+
+div.divCCLogo {
+	float: right;
+	width: 55px;
+	}
+
+.upgrade div.LeftColumn {
+	margin-right: 10px;
+	width: auto;
+	}
+
+#divBillingInfo h2 {
+	background: url(../images/icons/bg_icons_messageBox.png) no-repeat -1482px 10px;
+	}
+
+#divEULA h2 {
+	background-image: url(../images/icons/LicenseAgreementLarge.png);
+	}
+
+#divOrderSummary h2 { 
+	background-image: url(../images/icons/UpgradeAccount_large.png);
+	}
+
+#divSubscriptionInfo h2 {
+	background: url(../images/icons/bg_icons_messageBox.png) no-repeat -1482px 10px;
+	}
+
+div.eula {
+	border: 1px solid #269;
+	font-size: 12px;
+	height: 12em;
+	overflow-y: scroll;
+	padding: 4px;
+	width: 320px;
+	}
+	div.eula h2 {
+		display: none;
+		}
+
+span.spanCCName {
+	font-size: 14px;
+	font-weight: bold;
+	}
+	
+/* accountUpgradeConfirm.css --> account/confirm.tpl */
+.upgradeConfirm .annotation {
+	color: #666;
+	float: none;
+	font-size: 9px;
+	font-weight: normal;
+	margin: 0 0 10px;
+	}
+
+.upgradeConfirm dd {
+	font-weight: bold;
+	text-align: right;
+	margin: 0 0 10px;
+	}
+
+.upgradeConfirm div.ContentContainer {
+	margin-right: 12px;
+	padding-right: 10px;
+	width: 715px;
+	}
+
+.upgradeConfirm div#divContentFrame {
+	background-color: #d7effa;
+	}
+
+dl.currentCharges {
+	border-top: 1px solid #269;
+	clear: left;
+	padding: 5px 0 10px;
+	}
+	
+dl.orderSummary p {
+	margin: 0;
+	}
+
+.upgradeConfirm dt {
+	clear: both;
+	float: left;
+	font-weight: bold;
+	margin: 0 0 10px;
+	}
+	
+.upgradeConfirm .first {
+	margin: 0;	
+	}
+	
+/* accountUpgradeCreditCard.css --> account/creditcard.tpl */
+
+.upgradeCreditCard div.divMessage {
+	margin-bottom: 20px;
+	margin-top: 10px;
+	}
+
+.upgradeCreditCard div.hr {
+	width: auto;
+	}
+
+table.tableCreditCard {
+	width: 100%;
+	}
+	table.tableCreditCard td,
+	table.tableCreditCard th {
+		font-size: 10px;
+		text-align: center;
+		}
+		table.tableCreditCard td input,
+		table.tableCreditCard td select {
+			font-size: 10px;
+			margin: 0 auto;
+			}
+			table.tableCreditCard td.cardType select {
+				margin: 0 auto;
+				}
+			table.tableCreditCard td.expiration select {
+				float: left;
+				}
+			table.tableCreditCard td.inputRadio {
+				width: 20px;
+				}
+			table.tableCreditCard td select.SelectList {
+				margin-left: 3px;
+				margin-right: 5px;
+				}
+		table.tableCreditCard td label {
+			margin: 0;
+			}
+			
+/* accountUpgradeUpsell.css --> account/concierge.tpl, account/done.tpl, account/enterprise.tpl, account/fastsend.tpl, account/upsell.tpl */
+
+#callMe label {
+	float: none;
+	width: auto;
+	}
+
+.contentBoxWide .topRightContent {
+	float: right;
+	margin: -30px 0 8px 20px;
+	}
+	.contentBoxWide .topRightContent a {
+		display: block;
+		text-align: center;
+		}
+	.contentBoxWide .topRightContent img {
+		margin-bottom: 5px;
+		}
+
+div.ContentContainer p.needToUpgrade {
+	margin-bottom: 0;
+	}
+
+.upgradeUpsell #divContentFrame {
+	background-color: #d7effa;
+	}
+
+.coupon {
+	clear: both;
+	}
+	div.coupon p {
+		margin-bottom: 0;
+		}
+
+.upgradeUpsell div.divMessage p {
+	margin: 0 0 0 40px;
+	}
+	.upgradeUpsell div.divMessage p.pMessage {
+		margin-bottom: 5px;
+		}
+
+div.row {
+	float: left;
+	font-size: 12px;
+	margin-top: 10px;
+	width: 100%;
+	}
+	div.row label {
+		display: inline;
+		float: left;
+		line-height: 100%;
+		margin-top: 0;
+		margin-bottom: 0;
+		width: 8em;
+		}
+	div.row input,
+	div.row select,
+	div.row textarea {
+		display: inline;
+		margin-bottom: 0;
+		}
+
+.pricingInfo {
+	float: left;
+	margin: 6px 0 0 10px;
+	}
+
+.upgradeUpsell #sMessage {
+	width: 670px;
+	height: 100px;
+	}
+
+/* addReport.css --> mycontacts/report.tpl, mycontacts/reportaddone.tpl */
+#addOneReport td,
+#addOneReport th {
+    text-align: left;    
+    }
+
+.addReport .firstRow  {
+    font-weight: bold;
+    }
+
+.addReport strong {
+    color: #555;
+    }
+
+.addReport td,
+.addReport th {
+    text-align: center;    
+    }
+    .addReport td {
+        color: #666;    
+        }
+    tr.alignCenter th {
+        text-align: center;    
+        }
+
+.addReport .total {
+    border-left: 2px solid #269;
+    color: #000;
+    }
+
+.addReport tr.totals td {
+    border-top: 1px solid #269;    
+    }
+
+.addReport tr.totals td,
+.addReport tbody tr.totals th {
+    background-color: #E8EFF5;
+    color: #000;
+    }
+
+.addReport tr.trDataGridAltRow td.total {
+    background-color: #E8ECED;
+    }
+
+.addReport tr.trDataGridRow th,
+.addReport tr.trDataGridAltRow th {
+    background-color: #FFF;
+    border-bottom: 1px solid #269;
+    border-top: 0;
+    color: #000;
+    font-weight: normal;
+    }
+    .addReport tr.firstRow th {
+        font-weight: bold;   
+        }
+    .addReport tr.totals th {
+        background-color: #E8EFF5;     
+        border-top: 1px solid #269;    
+        }
+    .addReport tr.trDataGridAltRow th {
+        background-color: #FFFBF7;    
+        }
+
+.addReport tr.trDataGridRow td.total {
+    background-color: #E8EFF4;
+    }
+
+.addReport tbody tr.totals td.total {
+    background-color: #D4E1EC;
+    }
+    
+/* autoresponder.css --> view.tpl | sendAutoresponder.css --> autoresponder.tpl */
+.autoresponder th.thARNumberColumnTitle {
+	padding-right: 8%;
+	text-align: right;
+	}
+.autoresponder td.tdARNumberColumn {
+	padding-right: 12%;
+	text-align: right;
+	}
+	
+/* choice.css --> message/paypersend.tpl, message/start.tpl, mycontacts/add.tpl, settings/account.tpl */
+.choice h2 a,
+.choice h3 a {
+	text-decoration: none;
+	}
+
+.CSIcon {
+	background: url(../images/icons/bg_icons_landing_secondary.png) no-repeat 0 -1047px;
+	display: block;
+	height: 100px;
+	margin: 0 auto;
+	overflow: hidden;
+	text-indent: -5000px;
+	width: 150px;
+	}
+	#iconAccountSettingsContact { 
+		background-position: 0 -947px;
+		}
+	#iconAccountSettingsInvoices { 
+		background-position: 0 -1147px;
+		}
+	#iconContactsCopyPaste { 
+		background-position: 0 -547px;
+		}
+	#iconContactsImport { 
+		background-position: 0 -347px;
+		}
+	#iconContactsOneByOne { 
+		background-position: 0 -447px;
+		}
+	#iconCreateBlogPost {
+		background-position: 0 -273px;
+		height: 74px;
+		margin: 16px 0 0 12px;
+		position: absolute;
+		width: 110px;
+		}
+	#iconCreateMessageBuilder { 
+		background-position: 0 -647px;
+		}
+	#iconCreateScratch { 
+		background-position: 0 -847px;
+		}
+	#iconMessageCopyPaste { 
+		background-position: 0 -747px;
+		}
+	#iconPPSPendingMessages { 
+		background-position: 0 -1247px;
+		}
+	#iconPPSPendingMessagesDisabled { 
+		background-position: 0 -1347px;
+		}
+	#iconPPSThisMonth { 
+		background-position: 0 -1447px;
+		}
+	#iconPPSThisMonthDisabled { 
+		background-position: 0 -1547px;
+		}
+	#iconPPSThisMonthRevoke,
+	#iconPPSThisYearRevoke { 
+		background-position: 0 -1847px;
+		}
+	#iconPPSThisYear { 
+		background-position: 0 -1647px;
+		}
+	#iconPPSThisYearDisabled { 
+		background-position: 0 -1747px;
+		}
+
+.Disabled {
+	cursor: default;
+	}
+
+.divBanner {
+	margin-bottom: 40px;
+}
+.divChoiceTop {
+	background: url(../images/bg_landing_secondary.png) no-repeat 0 -323px;
+	height: 15px;
+	width: 710px;
+	}
+
+.divLowPriorityAction {
+	background: url(../images/bg_landing_secondary.png) no-repeat;
+	clear: left;
+	height: 131px;
+	margin: 0 0 10px 0;
+	width: 710px;
+	}
+	#divCreateBlogPostBanner {
+		background-position: 0 -131px;
+		height: 107px;
+		}
+		#divCreateBlogPostBanner h2,
+		#divCreateBlogPostBanner p {
+			margin-left: 135px;
+			}
+	.divLowPriorityAction form {
+		margin-bottom: 5px;
+		margin-left: 135px;	
+		}
+		.divLowPriorityAction form select {
+			float: left;
+			margin-right: 20px;
+			width: 250px;
+			}
+	.divLowPriorityAction h2,
+	.divTabChoice .Column h3 {
+		font-size: 15px;
+		font-weight: bold;
+		margin: 0 10px 10px 20px;
+		text-align: left;
+		}
+		.divTabChoice .Column.Right h3 {
+			padding-top: 19px;
+			}
+		.divLowPriorityAction h2 {
+			margin-left: 135px;
+			padding-top: 15px;
+			}
+			.divPPSTakeNoAction h2 {
+				padding-top: 20px;
+				}
+	div.divLowPriorityAction p {
+		font-size: 11px;
+		margin-bottom: 5px;
+		margin-left: 135px;
+		}
+
+.divTabChoice {
+	margin-right: 10px;
+	width: 100%;
+	}
+	.divTabChoice .button {
+		margin-bottom: 20px;
+		}
+	.divTabChoice > div {
+		text-align: center;
+		width: 33%;
+		}
+		.divTabChoice .Column p {
+			font-size: 11px;
+			margin-bottom: 16px;
+			margin-left: 35px;
+			margin-right: 20px;
+			}
+		.divTabChoice .Column ul {
+			margin-left: 35px;
+			}
+			.divTabChoice .Column ul li {
+				font-size: 11px;
+			}
+	.divTabChoice img {
+		margin-bottom: 10px;
+		}
+
+
+.divTopChoiceCallout {
+	background: url(../images/bg_landing_secondary.png) no-repeat 0 -238px;
+	height: 85px;
+	margin: 5px 0 20px;
+	position: relative;
+	width: 350px;
+	}
+	.divTopChoiceCallout h2 {
+		font-size: 15px;
+		font-weight: bold;
+		margin: 0;
+		}
+
+.divTopChoiceIcon {
+	background: url(../images/icons/bg_icons_landing_secondary.png) no-repeat;
+	height: 80px;
+	position: absolute;
+		left: 220px;
+		top: 6px;
+	width: 140px;
+	}
+	#GlobeIcon {
+		background-position: 0 -80px;
+		height: 93px;
+		left: 272px;
+		top: -5px;
+		width: 93px;
+		}
+	#SignupIcon {
+		background-position: 0 -173px;
+		height: 100px;
+		left: 265px;
+		top: -12px;
+		width: 101px;
+		}
+		.divTopChoiceIcon a {
+			display: block;
+			height: 100%;
+			}
+
+.divTabChoicePage {
+	background: url(../images/bg_landing_secondary.png) no-repeat 0 100%;
+	clear: left;
+	float: left;
+	margin-bottom: 20px;
+	width: 710px;
+	}
+
+#divCreateMessageActions .divTabChoice > div {
+	padding-bottom: 20px;
+	text-align: left;
+}
+
+.divTopChoiceText {
+	padding-left: 10px;
+	padding-top: 10px;
+	}
+	div.divTopChoiceText p {
+		font-size: 11px;
+		margin-bottom: 0;
+		width: 240px;
+		}
+
+#ImportFromURLTextbox h3 {
+	margin-bottom: 5px;
+	}
+
+#ImportFromURLTextbox input {
+	float: left;
+	font-size: 12px;
+	width: 190px;
+	}
+	#ImportFromURLTextbox input#FromURLSubmit {
+		height: 32px;
+		margin-left: 10px;
+		margin-top: -8px;
+		width: 32px;
+		}
+
+#SignupFormText {
+	width: 250px;
+	}
+
+.TwoColumnContainer,
+.ThreeColumnContainer {
+	clear: both;
+	margin-left: 5px;
+	width: 100%;
+	}
+	.ThreeColumnContainer .Column form input {
+		margin-left: 20px;
+		}
+	.TwoColumnContainer div.Column {
+		width: 48%;
+		}
+
+/* createConfirmationRequest.css --> message/confirmationmessage.tpl */
+.box {
+	background: url(../images/bg_landing_secondary.png) no-repeat 0 -323px;
+	float: left;
+	width: 710px;
+	}
+	.box h3 {
+		float: left;
+		font-size: 16px;
+		padding: 11px 0 11px 15px;
+		}
+		.reuseExisting h3 {
+			padding-bottom: 0;
+			}
+	.box h4 {
+		font-size: 14px;
+		}
+	.box .helpLink {
+		margin-bottom: 0;
+		margin-top: 15px;
+		}
+
+.chooseMethod div {
+	border-right: 2px dotted #E3E2CE;
+	float: left;
+	padding: 0 13px;
+	text-align: center;
+	width: 110px; /* IE6 */
+	}
+	.chooseMethod a.button {
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+		width: 45px;
+		}
+	.chooseMethod .fromScratch {
+		width: 92px; /* IE6 */
+		}
+		.chooseMethod h4 {
+			margin-bottom: 6px;
+			}
+	.chooseMethod .importWebRSS {
+		border-right: 0;
+		padding-right: 0;
+		width: 207px; /* IE6 */
+		}
+	.chooseMethod .messageBuilder {
+		padding-left: 7px;
+		width: 177px; /* IE6 */
+		}
+	.chooseMethod div fieldset {
+		margin-bottom: 0;
+		}
+	.chooseMethod div .icon {
+		background:  url(../images/icons/bg_icons_landing_secondary.png) no-repeat 50% -1947px;
+		display: block;
+		height: 68px;
+		margin: 0 auto;
+		}
+		.chooseMethod .copyPaste .icon {
+			background-position: 50% -2083px;
+			}		
+		.chooseMethod .fromScratch .icon {
+			background-position: 50% -2015px;
+			}
+		.chooseMethod .importWebRSS .icon {
+			background-position: 50% -2151px;
+			}
+		.chooseMethod div .icon a {
+			display: block;
+			height: 100%;
+			}
+	.chooseMethod div input {
+		display: inline;
+		margin: 0 0 -7px 5px;
+		}
+		.chooseMethod div input#buttonMessageCreateImport {
+			margin-left: 0;
+			float: left;
+			}
+		.chooseMethod div input.url {
+			display: block;
+			float: left;
+			font-size: 12px;
+			margin-top: 1px;
+			width: 106px;
+			}
+
+.createConfirmationRequest .container {
+	background: url(../images/bg_landing_secondary.png) no-repeat 0 100%;
+	clear: left;
+	float: left;
+	padding: 0 15px 15px;
+	width: 680px;
+	}
+
+.createConfirmationRequest .ContentContainer p.legend {
+	color: #666;
+	float: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	margin: 20px 0 0;
+	}
+
+.createConfirmationRequest .ContentContainer .transition {
+	clear: left;
+	color: #264978;
+	font: bold 16px/100% 'Trebuchet MS', 'Nimbus Sans L', Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 12px 0 12px 15px;
+	width: 680px; /* IE */
+	}
+
+.createConfirmationRequest #divContactsPagingBottom,
+.createConfirmationRequest #divContactsPagingTop {
+	font-size: 11px;
+	padding: 0 0 12px;
+	text-align: right;
+	}
+	.createConfirmationRequest #divContactsPagingBottom {
+		clear: left;
+		padding: 12px 0 2px;
+		width: 680px; /* IE */
+		}
+	.createConfirmationRequest #divContactsPagingTop {
+		border-bottom: 1px solid #E3E2CE;
+		}
+	.createConfirmationRequest #divContactsPagingBottom p,
+	.createConfirmationRequest #divContactsPagingTop p {
+		margin: 0;
+		}
+		
+.messageEntry {
+	border-bottom: 1px solid #E3E2CE;
+	clear: left;
+	float: left;
+	margin: 0;
+	padding: 12px 120px 12px 27px;
+	position: relative;
+	width: 533px;
+	}
+	.messageEntry dd {
+		float: left;
+		font: 10px/100% Arial, Helvetica, sans-serif;
+		margin: 3px 10px 3px 0;
+		padding: 0;
+		}
+		.messageEntry dd span {
+			color: #777;
+			}	
+	.messageEntry dt {
+		font: 14px/100% 'Trebuchet MS', 'Nimbus Sans L', Arial, Helvetica, sans-serif;
+		}
+		.messageEntry dt.confirmationIcon {
+			background: url(../images/icons/ConfirmationRequest.png) no-repeat;
+			margin-left: -27px;
+			padding-left: 27px;
+			}
+	.messageEntry .messageActions {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+			right: -13px;
+			top: 2px;
+		}
+		.messageEntry .messageActions li {
+			float: left;
+			margin: 13px 4px 0 6px;
+			padding: 0;
+			}
+			.messageEntry .messageActions li.preview {
+				margin-right: 4px;
+				margin-top: 19px;
+				}
+			.messageEntry .messageActions li input {
+				margin: 0;
+				}
+
+/* editContact.css --> mycontacts/edit.tpl */
+
+.editContact #divOverview {
+	float: right;
+	width: 28%;
+	}
+	
+.editContact input.checkField {
+	float: none;
+	display: inline;
+	margin-bottom: 0;
+	margin-top: 0;
+	}
+	
+.interestFields input {
+	position: absolute;
+	}
+	
+.editContact label,
+.myContactsAddOne label {
+	margin: 0;
+	}
+	.editContact .interestFields label,
+	.myContactsAddOne .interestFields label {
+		margin-bottom: 10px;
+		padding-left: 20px
+		}
+
+.editContact .tableDataGrid td label.lblCheckbox {
+    display: inline;
+    margin: 0 0 0 5px;
+    }
+
+ul#ulContactOverview {
+	list-style-type: none;
+	}
+	ul#ulContactOverview li {
+		margin-bottom: 10px;
+		}
+
+#showField input {
+	display: inline;
+	margin: 0 4px 0 0;
+	}
+
+/* editCustomField.css --> settings/editcustomfield.tpl */
+#showField label {
+	display: inline;
+	}
+
+#showField p {
+	margin-bottom: 12px;
+	}
+
+/* editErrorMsg.css --> mycontacts/editconfirm.tpl */
+.editConfirm #confirm {
+    float: left;
+    }
+    
+.divBackButton {
+    clear: left;   
+    }
+    
+.editConfirm div.hr {
+    margin: 4px 0 10px 0;   
+    }
+    
+.editConfirm .lblCheckbox {
+    margin-left: 8px;
+    display: inline;
+    }
+
+/* editFolders.css --> folders/editfolders.tpl */
+#fsFolderSettings {
+	position: relative;
+	}
+		
+#fsPermissions,
+#fsPermissions .CheckboxInput,
+#fsPermissions p {
+	margin-bottom: 0;
+	}
+	
+/* editQuestion.css --> survey/edit_quest.tpl */
+.editQuestion #columnLeft {
+	float: left;
+	width: 58%;
+	}
+
+.editQuestion #columnRight {
+	float: right;
+	width: 38%;
+	}
+
+.editQuestion div.hr {
+	clear: both;
+	}
+	
+.editQuestion label {
+	clear: both;
+	}
+	
+/* export.css --> mycontacts/export.tpl */
+fieldset#fieldsetExportSubscriberFields {
+    float: left;
+    width: 40%;
+	}
+
+fieldset div.checkbox input, 
+fieldset div.radio input {
+	position: absolute;
+	}
+
+fieldset div.checkbox label,
+fieldset div.file label,
+fieldset div.radio label,
+fieldset div.select label,
+fieldset div.text label, 
+fieldset div.textarea label {
+	margin: 0 0 4px;
+	}
+	fieldset div.checkbox label,
+	fieldset div.radio label {
+		padding: 0 0 0 20px;
+		}
+
+/* feedback.css --> home/feedback.tpl */
+body.feedback {
+    margin: 15px 20px;
+	}
+
+.feedback input, 
+.feedback textarea {
+	margin-bottom: 20px;
+	}
+	.feedback input.checkbox,
+	.feedback fieldset.RadioGroup input {
+		float: left;
+		margin-right: 6px;
+		margin-top: 0;
+		}
+	.feedback textarea {
+		width: 100%;
+		}	
+		
+.feedback fieldset.RadioGroup {
+	margin-bottom: 10px;
+	}
+
+.feedback label {
+	margin-bottom: 5px;
+	margin-top: 0;
+	}	
+		
+/* home.css --> home/welcome.tpl */
+#linkSlideShowBottom {
+	background: url(../images/bg_slideshow.png) no-repeat 0 -950px;
+	height: 50px;
+	width: 332px;
+	cursor: pointer;
+	}
+	
+#divAccountManager br {
+	clear: none;
+	}
+#divAccountManager h3 {
+	margin-bottom: 10px;
+	padding-top: 20px;
+	}
+#divAccountManager img {
+	display: block;
+	float: left;
+	margin-right: 10px;
+	}
+
+.home div.ContentContainer {
+    margin-right: 12px;
+    padding-right: 10px;
+    width: 715px;
+	}
+
+div#divCommunityLinks ul {
+	list-style: none;
+	margin: 0 0 0 5px;
+	}
+	div#divCommunityLinks li {
+		background: url(../images/ListBullet.png) no-repeat 2px -4px;
+		padding-left: 20px;
+		position: relative;
+		line-height: 135%;
+		}
+
+.home div#divContentFrame {
+	background-color: #d7effa;
+	padding-top: 0;
+	}
+
+#divHomeWelcome {
+	color: #333;
+	font-family: Arial, Helvetica, sans-serif;
+	}
+
+div#divIntelliContactAssist .HelpTopicHidden {
+	display: none;
+	}
+div#divIntelliContactAssist li {
+	background: url(../images/ListBullet.png) no-repeat 2px -4px;
+	padding-left: 20px;
+	line-height: 135%;
+	}
+	div#divIntelliContactAssist #ulAssistCompleted li {
+		background: url(../images/icons/CheckBullet.png) no-repeat 3px 3px;
+		}
+div#divIntelliContactAssist	#linkCloseAssist {
+	cursor: pointer;
+	position: absolute;
+		right: 10px;
+		top: 10px;
+	}
+div#divIntelliContactAssist p#pHelpTopicReset {
+	clear: left;
+	display: none;
+	}		
+div#divIntelliContactAssist p#pHelpTopicToggle {
+	padding: 7px 0 0 0;
+	text-align: right;
+	}
+div#divIntelliContactAssist ul {
+	list-style: none;
+	margin: 0 0 0 5px;
+	}
+div#divIntelliContactAssist .ulAssist .HelpTopicDecline {
+	color: #999;
+	font-size: 10px;
+	position: absolute;
+	right: 15px;
+	}	
+div#divIntelliContactAssist #ulAssistCompleted {
+	display: none;
+	margin-top: 15px;		
+	}
+
+#divIntelliContactNews #rssLink {
+	background: url(../images/icons/bg_icons_home.png) no-repeat;
+	height: 24px;
+	overflow: hidden;
+	position: absolute;
+		right: 10px;
+		top: 10px;
+	text-indent: -9999px;
+	width: 24px;
+	}
+
+div#divSlideShowContent {
+	background: url(../images/bg_slideshow.png) no-repeat -370px 50%;
+	position: absolute;
+		left: 45px;
+		top: 90px;
+	display: none;
+	width: 260px;
+	z-index: 1;
+	}
+	div#divSlideShowContent a {
+		text-decoration: none;
+		}
+	div#divSlideShowContent dd {
+		text-align: right;
+		}
+	div#divSlideShowContent dl {
+		font-family: Arial, Helvetica, sans-serif;
+		line-height: 180%;
+		position: relative;
+		margin-top: 10px;
+		}
+	div#divSlideShowContent dt {
+		clear: both;
+		color: #333;
+		float: left;
+		}
+		div#divSlideShowContent dt a { 
+			color: #333;
+			}	
+	div#divSlideShowContent h3 {
+		font-size: 18px;
+		font-weight: normal;
+		line-height: normal;
+		}
+		div#divSlideShowContent h3 a {
+			display: block;
+			height: 297px;
+			position: absolute;
+				left: 0;
+				top: 0;
+			width: 100%;
+			z-index: 2;
+			}	
+
+div#divSlideShowTopFrame {
+	height: 30px;
+	overflow: hidden;
+	width: 332px;
+	}
+	div#divSlideShowTopFrame div.divSlideShowTop {
+		background: url(../images/bg_slideshow.png) no-repeat;
+		height: 950px;
+		width: 332px;
+		} 		
+			
+#divSubscriberLimit div.upload {
+	margin: 5px;
+	}
+
+#divSubscriberLimit dd.count {
+	color: #5F5F5F;
+	font-size: 14px;
+	position: absolute;
+		right: 2px;
+		top: 4px;
+	}
+	#divSubscriberLimit .total dd.count {
+		font-weight: bold;
+		top: 2px;
+		}		
+#divSubscriberLimit dd.new {
+	position: absolute;
+		bottom: 4px;
+		left: 31px;
+	}	
+	#divSubscriberLimit dd.new a {
+		font: 10px/10px Arial, Helvetica, sans-serif;
+		}	
+	
+#divSubscriberLimit dl {
+	border-top: 1px dotted #dadada;
+	position: relative;
+	padding: 4px 0;
+	width: 100%;
+	}
+	#divSubscriberLimit dl.first,
+	#divSubscriberLimit dl.total {
+		border-top: 1px solid #dadada;
+		}
+#divSubscriberLimit .total dt {
+	color: #7a7a7a;
+	font: 10px/14px Arial, Helvetica, sans-serif;
+	margin-right: 100px;
+	}
+#divSubscriberLimit dt a {
+	background: url(../images/icons/bg_icons_home.png) no-repeat 0 -141px;
+	display: block;
+	font: 14px/14px 'Trebuchet MS', 'Nimbus Sans L', Arial, Helvetica, sans-serif;
+	margin: 0 55px 0 0;
+	padding: 0 0 12px 31px;
+	text-decoration: none;
+	width: 246px;
+	}
+#divSubscriberLimit dt strong {
+	color: #7a7a7a;
+	}
+	
+#divSubscriberLimit h3 {
+	margin-top: 12px;
+	}
+	
+#divSubscriberLimit p.upgrade {
+	text-align: right;
+	}
+
+div#HelpSeqStart {
+	opacity: 0;
+	position: absolute;
+	right: 20px;
+	top: 10px;	
+	visibility: hidden;	
+	z-index: 999;
+	}	
+	
+div#HomePageColumns {
+	clear: both;
+	}
+	div#HomePageColumns .LeftColumn {
+		margin-right: 0;
+		width: 362px;
+		}
+
+div.contentBoxMiddle p.status {
+	text-align: center;
+	margin-bottom: 8px;
+	margin-right: 0;
+	}
+div.contentBoxMiddle p.upgrade {
+	margin-right: 7px;
+	text-align: right;
+	}
+
+#divAccountManager h2 { 
+	background-position: 12px -363px;
+	}
+#divCommunityLinks h2 {
+	background-position: 10px -406px;
+	}
+#divImageHosting h2 { 
+	background-position: 11px -225px;
+	}  
+#divIntelliContactAssist h2 { 
+	background-position: 10px -37px;
+	}
+#divIntelliContactNews h2 {
+	background-position: 10px -457px;
+	}
+#divLastMessages h2 {
+	background-position: 11px -317px;
+	}
+#divMessagesRemaining h2 { 
+	background-position: 10px -180px;
+	}
+#divPartnerCentral h2 {
+	background-position: 11px -270px;
+	}
+#divSubscriberLimit h2 { 
+	background-position: 10px -84px;
+	}
+
+#promotion {
+	margin-bottom: 0;
+	padding-top: 10px;
+	}
+	#promotion #closePromotion {
+		position: absolute;
+			top: 10px;
+			right: 10px;
+		}
+
+.sNewsDate {
+	color: #000;
+	display: block;
+	font: 12px/normal Arial, Helvetica, sans-serif;
+	padding-top: 5px;
+	}
+
+.sNewsTitle a {
+	text-decoration: none;
+	}
+
+.usageMeter {
+	background: url(../images/bg_meter.png) no-repeat;
+	height: 24px;
+	margin: 0 0 10px;
+	width: 332px;
+	}
+	.usageMeter span {
+		background: url(../images/bg_meter.png) no-repeat -332px 0;
+		display: block;
+		height: 100%;
+		}
+
+/* imageLibrary.css --> imagelibrary.tpl */
+#HostingGauge {
+	background: url(../images/ImageLibraryGauge.png) no-repeat;
+	height: 50px;
+	padding: 5px 4px;
+	}
+	#HostingGauge div {
+		background: url(../images/ImageLibraryGaugeBG.png) no-repeat;
+		height: 20px;
+		}
+
+.ImageBlock {
+	float: left;
+	margin: 0 20px 20px 0;
+	}
+	#fsFolderSettings .ImageBlock {
+		margin-bottom: 0;
+		}
+ 		
+.ImageContainer {
+	clear: both;
+	float: left;
+	height: 35px;
+	position: relative;
+	margin: -15px 0 0 0;
+	width: 155px;
+	}
+	.profileSettings .ImageContainer {
+		width: 190px;
+		}
+	.ImageContainer .iconGridDelete {
+		float: right;
+		}
+	.ImageContainer input {
+		float: right;
+		margin: 3px 0 0 5px;
+		}
+		
+.ImageLeftColumn {
+	font-size: 10px;
+	float: left;
+	width: 93px;
+	}
+	.ImageLeftColumn .invalidType {
+		font-weight: bold;
+		}
+
+.ImageRightColumn {
+	float: right;
+	width: 62px;
+	}
+
+.pImg {
+	border: 1px solid #269;
+	height: 150px;
+	width: 150px;
+	}
+	.profileSettings .pImg {
+		height: 200px;
+		width: 200px;
+		}
+	.pImg span {
+		cursor: pointer;
+		cursor: hand;
+		display: block;
+		height: 140px;
+		padding: 5px;
+		text-align: center;
+		}
+		.profileSettings .pImg span {
+			height: 190px;
+			}
+
+.UploadArea {
+	margin: 0 0 20px;
+	position: relative;
+	}
+	.UploadArea .Upload {
+		background-color: #FFD;
+		border: 1px solid #CCC;
+		padding: 4px 8px 0;
+		width: 430px;
+		}
+		.UploadArea .Upload input {
+			margin: 0;
+			}
+	.UploadArea .Usage {
+		padding: 0 4px 4px 4px;
+		position: absolute;
+			right: 20px;
+			top: 5px;
+		width: 215px;
+		}
+		.UploadArea .Usage h3 {
+			margin-bottom: 0;
+			}
+		.UploadArea .Usage p {
+			font-size: 12px;
+			font-style: italic;
+			margin: 0 0 10px;
+			}
+
+/* imc.css --> imc.tpl */
+.imc label {
+	margin-bottom: 0;
+	}
+	
+.imc .selectDate,
+.settingsCreditCard .selectDate {
+  	display: inline;
+	}
+
+/* importAction.css --> import/action.tpl */
+.importAction div.container {
+	border: 1px solid #CCC;
+	margin: 0 0 10px;
+	padding: 10px;
+	}
+	.importAction div.container fieldset.RadioGroup {
+		margin: 0 0 10px
+		}
+		.importAction div.container fieldset.RadioGroup input {
+			clear: left;
+			margin-bottom: 5px;
+			}
+		.importAction div.container fieldset.RadioGroup label {
+			display: block;
+			margin-bottom: 5px;
+			}
+	.importAction div.container ul {
+		margin-left : 15px;
+		}
+
+.importAction div.LeftColumn {
+	margin-right: 20px;	
+	width: 345px;
+	}
+
+.importAction div.RightColumn {
+	width: 345px;
+	}
+
+.importAction fieldset#requireConfirmation {
+	margin-top: 20px
+	}
+	.importAction fieldset#requireConfirmation label {
+		margin: 0 0 0 20px;
+		}
+
+#fieldsetSpamFree {
+    background: #FFD;
+   	text-align: center;
+	}
+	#fieldsetSpamFree input {
+		display: inline;
+		margin: 0;
+	    width: 50px;
+		}
+	#fieldsetSpamFree label {
+		margin: 0;
+		}
+	#fieldsetSpamFree p {
+		margin: 0 0 10px 0;
+		text-align: left;
+		}
+
+#uploadOptions {
+	border-top: 1px dotted #CCC;
+	padding: 10px 0 0;
+	}
+	#uploadOptions input {
+		float: left;
+		margin: 0 4px 0 0;
+		}
+	#uploadOptions label {
+		margin-bottom: 0;
+		}
+		
+/* importFile.css --> file.tpl */
+.importContacts h2 {
+	clear: both;
+	}
+
+fieldset#addToList,
+fieldset#addToList label,
+fieldset.LeftColumn label {
+	margin: 0;
+	}
+
+.importContacts fieldset#requireConfirmation {
+	margin: 20px 0 0 0;
+	}
+
+#formActiveUploads {
+	margin-bottom: 10px;
+	}
+	#formActiveUploads table {
+		margin-bottom: 5px;
+		}
+
+select#dropdownViewLimit {
+	display: inline;
+	font-size: 11px;
+	margin-bottom: 3px;
+	width: 50px;	
+	}
+
+/* landing.css --> create/create.tpl, mycontacts/mycontacts.tpl, send/send.tpl, settings/settings.tpl, track/track.tpl */
+.divTabHomeBox {
+	background: #fff url(../images/fixed-door-landing.png) no-repeat;
+	display: inline;
+	float: left;
+	height: 170px;
+	margin: 10px 0 0 10px;
+	padding: 10px 10px 10px 100px;
+	position: relative;
+	width: 240px;
+	}
+	.divTabHomeBox h2 {
+		color: #908F82;
+		font-size: 17px;
+		font-style: italic;
+		font-weight: bold;
+		}
+	.divTabHomeBox .icon {
+		background: url(../images/icons/bg_icons_landing.png) no-repeat 4px 3px;
+		height: 89px;
+		position: absolute;
+			left: 10px;
+			top: 10px;
+		width: 80px;
+		}
+		#divAddContacts .icon {
+			background-position: 3px -88px;
+			}
+		#divClientFolders .icon {
+			background-position: 3px -177px;
+			}
+		#divCreateAutoresponders .icon {
+			background-position: 2px -360px;
+			}
+		#divCreateMessages .icon {
+			background-position: 2px -270px;
+			}
+		#divCreateSurveys .icon {
+			background-position: 2px -450px;
+			}
+		#divCustomFields .icon {
+			background-position: 4px -536px;
+			}
+		#divImageLibrary .icon {
+			background-position: 5px -626px;
+			}
+		#divManageLists .icon { 
+			background-position: 4px -717px;
+			}
+		#divManageSegments .icon {
+			background-position: 4px -806px;
+			}
+		#divPendingMessages .icon {
+			background-position: 3px -895px;
+			}
+		#divSendingOptions .icon {
+			background-position: 4px -986px;
+			}
+		#divSendMessages .icon {
+			background-position: 4px -1077px;
+			}
+		#divSendResponders .icon {
+			background-position: 3px -1166px;
+			}
+		#divSendSurveys .icon {
+			background-position: 4px -1259px;
+			}
+		#divTrackAllMessages .icon {
+			background-position: 4px -1346px;
+			}
+		#divTrackAutoResponders .icon {
+			background-position: 4px -1436px;
+			}
+		#divTrackDashboard .icon {
+			background-position: 4px -1526px;
+			}
+		#divTrackLastMessage .icon {
+			background-position: 2px -1616px;
+			}
+		#divTrackSurveys .icon {
+			background-position: 4px -1708px;
+			}
+		#divViewContacts .icon {
+			background-position: 3px -1797px
+			}
+			.divTabHomeBox .icon a {
+				display: block;
+				height: 100%;
+				}
+	.divTabHomeBox li {
+		display: inline;
+		float: left;
+		font-weight: bold;
+		margin-right: 10px;
+		white-space: nowrap;
+		}
+	.divTabHomeBox p {
+		font-family: Arial, Helvetica, sans-serif;
+		}
+	.divTabHomeBox ul {
+		list-style: none;
+		margin-top: -10px;
+		width: 240px; /* IE6 */
+		}
+
+.divTabLandingPage {
+	float: left;
+	padding: 0 0 20px;
+	}
+
+.landing .ContentContainer {
+	width: 720px;
+	}
+
+.landing #divContentFrame {
+	background-color: #F5F0ED;
+	}
+
+/* lists.css --> mycontacts/lists.tpl */
+#myListsTable {
+	border-width: 0;
+	}
+	#myListsTable td.tdFirst {
+		border-left: 1px solid #269;
+		}
+	#myListsTable td.tdLast {
+		border-right: 1px solid #269;
+		}
+	#myListsTable tfoot td{
+		border-top: 3px;
+		}
+	#myListsTable tfoot td {
+		background-color: #fff;
+		}
+		
+/* listSettings.css --> mycontacts/listsettings.tpl */
+#buttonWelcomeSpamCheck {
+	margin: 0 auto;
+	}
+	
+div.notificationMessage h3 {
+	margin: 0 0 10px;	
+	}
+	
+div.notificationMessage p {
+	margin: 0 0 8px;
+	}
+	
+div.notificationMessage ul {
+	list-style-type: none;
+	margin-bottom: 20px;
+	}
+	div.notificationMessage ul li {	
+		margin: 0 0 6px;
+		}
+		
+#doubleOptinHtml {
+	height: 300px;
+	margin: 0 0 16px;
+	position: relative;
+	width: 662px;
+	z-index: 0;
+	}
+
+.listSettings #buttonWelcomeSpamCheck,
+.signupFormFields #buttonSpamCheck {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+.listSettings h4 {
+	font-weight: bold;
+	margin-bottom: 8px;
+	}	
+
+.listSettings .hr {
+	clear: left;
+	}
+	
+.listSettings .LeftColumn label {
+	margin: 0 0 10px;	
+	}
+
+#legendNotifications {
+	margin-left: 0;
+	padding-left: 0;
+	}
+	#legendNotifications div {
+		margin: 0 0 2px 7px;
+		}
+
+#previewOnly {
+	background: url(../images/watermark.png);
+	height: 270px;
+	position: absolute;
+	margin: 10px 0 0 4px;
+	width: 640px;
+	z-index: 1;
+	}
+
+.listSettings .RightColumn input {
+	display: inline;
+	float: left;
+	}
+
+.listSettings .RightColumn label {
+	display: inline;
+	}
+
+#sendWelcome div {
+	margin: 0 0 2px 7px;
+	}
+	
+#sendWelcome label {
+	margin-top: 5px;
+	display: inline;
+	}
+	
+#sendWelcome input {
+	display: inline;
+	margin-bottom: 0;
+	}
+		
+#sListOwnerAddRemove {
+	margin-right: 5px;
+	}
+	
+#sMessageSubject {
+	margin-bottom: 35px;
+	}	
+	
+#welcomeMessage {
+	margin-bottom: 0;
+	}
+	
+#sWelcomeText {
+	width: 715px;
+	}
+
+/* listsHealth.css --> lists/health.css */
+#listHealthSample {
+	background: url(../images/listHealthSample.png) no-repeat center;
+	height: 200px;
+	margin-bottom: 2em;
+	}
+	#listHealthSample p {
+		font-size: 19px;
+		padding: 2em;
+		}
+
+/* messageBlog.css --> message/blog.tpl */
+div#blogWelcome {
+	background: url(../images/blogIcon.png) no-repeat;
+	padding-left: 90px;
+	}
+
+.messageBlog div#divHTMLQuickSave {
+	float: right;
+	}
+	.messageBlog div#divHTMLQuickSave div {
+		clear: right;
+		float: right;
+		}
+	
+.messageBlog div#HTMLInstructions {
+	margin-top: 20px;
+	}
+	
+.messageBlog div.LeftColumn,
+.messageBlog div.RightColumn {
+	width: 50%;
+	}
+	.messageBlog div.LeftColumn {
+		margin-right: 0;
+		}
+
+/* messageEdit.css --> message/edit.tpl */
+.messageEdit .confirmation ul {
+	padding: 0 4px 6px 15px;	
+	}
+	.messageEdit .confirmation ul li {
+		margin: 4px 0 0;	
+		}
+		
+.messageEdit div.confirmation p {
+	margin: 4px 0 6px;	
+	}	
+
+.messageEdit #ManyCampaigns {
+	margin: 0 0 20px;
+	}
+	.messageEdit #ManyCampaigns select {
+		width: 100%;
+		}
+
+.sendMessage div#pagination {
+	text-align: right;  
+	}
+
+/* messageView.css --> message/view.tpl */
+.messageView div#pagination {
+	text-align: right;  
+	}
+	
+/* myContactsAddOne.css --> mycontacts/addone.tpl */
+.myContactsAddOne div.customFields {
+	float: left;
+	width: 45%;
+	}
+
+.myContactsAddOne div.hr {
+	clear: both;
+	}
+	
+#requireConfirmation {
+	margin-bottom: 0;
+	}
+
+#reuseConfirmation {
+	padding-left: 40px;
+	}
+	#reuseConfirmation a {
+		font-size: 10px;
+		}
+	#reuseConfirmation input {
+		float: left;
+		margin: 0;
+		}
+	#reuseConfirmation label {
+		display: inline;
+		margin: 0 0 0 5px;
+		}
+		
+/* myContactsCopyPaste.css --> mycontacts/copypaste.tpl */
+fieldset#copyText {
+	margin-top: 16px;
+	}
+
+textarea#sSubscribers {
+	height: 250px;
+	width: 650px;
+	}
+
+/* myContactsSearch.css --> mycontacts/view.tpl */
+a#viewRemoveFilters {
+	display: block;
+	float: left;
+	font-size: 10px;
+	margin: 4px 0 0 6px;
+	}
+
+.adminAlert {
+	color: #EF0000;
+	}
+
+#contactActionFormChangeContactStatus,
+#contactActionFormChangeListStatus,
+#contactActionFormResetCounts {
+	border: 1px solid #EF0000;
+	}
+
+.ContentContainer p.searchLinks {
+	margin: 0;
+	position: absolute;
+		right: 0;
+		top: 7px;
+	text-align: right;
+	width: 160px;
+	}
+
+.myContactsBrowse #divContactsListingBottom,
+.myContactsBrowse #divContactsPagingBottom,
+.myContactsBrowse #divContactsPagingTop {	
+	float: right;
+	clear: right;
+	}
+	
+#divContactsListingTop {
+	float: left;
+	}
+
+.divMessage ul.ulSearchParams {
+	list-style-type: square;
+	margin: 20px 0 20px 60px;
+	}
+
+.divSearchParams {
+	background-color: #ffffdd;
+	background-image: url(../images/icons/view_32.png);
+	padding: 0 10px 0 20px;
+	margin-left: 0;
+	min-height: 55px;
+	}
+
+#dropdownlistViewList {
+	float: left;
+	margin: 0 0 0 5px;
+	width: 300px;
+	}			
+
+fieldset.browseFilters {
+	margin-bottom: 0;
+	}
+	
+fieldset#contactActionGroup {
+	clear: both;
+	}
+	div.contactAction {
+		float: left;
+		clear: left;
+		width: 10em;
+		}
+		div.contactAction input.inputRadio {
+			float: left;
+			margin: 0;
+			}
+		div.contactAction label {
+			float: left;
+			margin: 0 0 0 4px;
+			}
+	fieldset.contactActionForm {
+		border-left: 1px solid #ccc;
+		padding-left: 1em;
+		}
+		fieldset.contactActionForm div.actionInfo {
+			font-size: 10px;
+			padding-bottom: 10px;
+			padding-top: 10px;
+			}
+		fieldset.contactActionForm select {
+			display: inline;
+			margin: 0;
+			width: 200px;
+			}
+		fieldset.contactActionForm input.inputButton,
+		fieldset.contactActionForm input.inputText {
+			display: inline;
+			margin: 10px 0 0 0;
+			}	
+
+.myContactsBrowse form {
+	clear: both;
+	}
+
+#iActionDestinationUnsubscribe {
+	width: 36%;
+	}
+
+input#bCreateAssociation {
+	float: left;
+	margin: 0 5px 0 0;
+	}
+	
+input#toggleSelectAllCheckbox {
+	margin: 0;
+	}	
+
+label#dropdownlistViewListLabel {
+	float: left;
+	font-weight: bold;
+	margin-top: 4px;
+	}
+	
+.myContactsBrowse label span {
+	color: #999;
+	}
+	
+#linkBrowse,
+#linkNewSearch {
+	background-image: url(../images/icons/browse.png);
+	background-repeat: no-repeat;
+	padding-left: 24px;
+	}
+	#linkNewSearch {
+		background-image: url(../images/icons/view.png);
+		padding-left: 20px;
+		}
+	
+.myContactsBrowse .radio {
+	float: left;
+	margin: 0;
+	}
+	.myContactsBrowse .contactStatus div {
+		padding-left: 120px;
+		}
+	.myContactsBrowse .listStatus div {
+		padding-left: 85px;
+		}
+	.myContactsBrowse .radio input,
+	.myContactsBrowse .radio label {
+		float: left;
+		}
+		.myContactsBrowse .radio input {
+			clear: left;
+			margin: 0;
+			}
+		.myContactsBrowse .radio label {
+			margin: 0 0 0 4px;
+			}
+
+#sActionNewContactStatus, 
+#sActionNewListStatus {
+	margin:10px 0 0;
+	width: 150px;
+	}
+
+.statusFilterCount {
+	display: block;
+	float: left;
+	margin-right: 0.5em;
+	text-align: right;
+	width: 5em;
+	}
+
+#statusFilterList {
+	clear: both;
+	list-style: none;
+	margin-bottom: 16px;
+	}
+	#statusFilterList a {
+		text-decoration: none;
+		}
+	#statusFilterList li {
+		margin-top: 2px;
+		}
+		#statusFilterList li li {
+			margin-left: 4em;
+			}
+		#statusFilterList li ul {
+			list-style: none;
+			}
+
+.myContactsBrowse table.tableDataGrid {
+	margin: 0
+	}
+
+td.tdSelectContact input {
+	margin: 1px 0 0 0;
+	}
+
+ul.searchLinks {
+	float: right;
+	list-style: none;
+	margin: 12px 6px 0 6px;
+	}
+
+#viewContactsHeader {
+	position: relative;	
+	}
+
+/* profileSettings.css --> folders/profilesettings.tpl */
+fieldset div.full,
+fieldset div.half,
+fieldset div.quarter,
+fieldset div.third,
+fieldset div.three-quarters,
+fieldset div.two-thirds{
+	float: left;
+	padding: 0 2% 10px 0;
+	}
+	fieldset div.adjacentTextarea {
+		margin-bottom: 30px;
+		}
+	fieldset div.full {
+		width: 96%;
+		}				
+	fieldset div.half {
+		width: 46%;
+		}	
+	fieldset div.quarter {
+		width: 22%;
+		}			
+	fieldset div.third {
+		width: 30%;
+		}
+	fieldset div.three-quarters {
+		width: 70%;
+		}			
+	fieldset div.two-thirds {
+		width: 60%;
+		}
+
+fieldset div.select select,
+fieldset div.text input, 
+fieldset div.textarea textarea {
+	width: 100%;
+	}
+	
+#fsFolderSettings fieldset {
+	clear: left;
+	margin-bottom: 0;
+	}
+	
+.profileSettings label {
+	margin-bottom: 0;
+	margin-top: 0;
+	}
+		
+/* rssinEdit.css --> rssin/edit.tpl */
+#dropdownlistMessageCampaign {
+	margin-bottom: 5px;
+	}
+
+fieldset.fsSettings {
+	margin: 0 60px 20px;
+	}
+	fieldset.fsSettings fieldset.RadioGroup	{
+		margin-bottom: 0;
+		}
+
+/*schedule.css --> send/schedule.tpl */
+.sendConfirmation div.hr,
+.schedule div.hr {
+	clear: left;
+	}
+
+fieldset#fieldsetDeliverNow,
+fieldset#fieldsetScheduleDelivery {
+    display: inline; /* IE */
+    float: left;
+	margin-right: 20px;
+	width: 323px;
+	}
+	fieldset#fieldsetScheduleDelivery {
+	    margin-right: 0;
+		}
+	fieldset#fieldsetScheduleDelivery .likeALabel {
+		margin: 0;
+		}
+	fieldset#fieldsetScheduleDelivery select {
+		display: inline;
+		}
+
+#recipientCount {
+	padding-bottom: 20px;
+	}
+	.sendRecipientsLists #recipientCount {
+		text-align: center;
+		}
+	.sendRssIn #recipientCount {
+		display: none;
+		}
+	#recipientCount .count {
+		font-weight: bold;
+		}
+
+/* search.css --> mycontacts/search.tpl */
+#buttonBrowseAllContacts {
+	float: right;
+	}
+
+div#divAdvancedSearch div.LeftColumn {
+	width: auto;
+	}
+
+div#divAdvancedSearch div.RightColumn {
+	margin-left: 10px;
+	width: 190px;
+	}
+	
+fieldset#fieldsetDateRange select {
+	float: left;
+	}
+	
+fieldset#QuickSearch {
+	margin-bottom: 0;
+	position: relative;
+	}
+	fieldset#QuickSearch input {
+		float: left;
+		margin: 0 8px 0 0;
+		}
+		fieldset#QuickSearch input#submitQuickSearch {
+			clear: none;
+			margin-top: -12px;
+			}
+
+.search .hr {
+	clear: both;
+	}
+
+/* segmentPreview.css --> preview.tpl */
+body.segmentPreview {
+	background-color: #FFF;
+	margin: 20px;
+	}
+
+.segmentPreview #description {
+	margin-bottom: 20px;
+	}
+
+#divCloseButton {
+	margin: 0 auto;
+	width: 140px;
+	}
+	
+#listingBottom,
+#pagingBottom,
+#pagingTop {
+	clear: right;
+	float: right;
+	}
+
+#listingTop {
+	float: left;
+	}
+
+.segmentPreview table.tableDataGrid {
+	margin: 0;
+	}
+
+/* segmentsCriteriaAdd.css --> segments/criteria_add.tpl, segments/criteria_condition.tpl */
+.dateLeft {
+	float: left;
+	margin-left: 4px;
+	}
+
+.finalCriteria {
+	clear: both;
+	text-align: center;
+	}
+	
+/* sendBlog.css --> send/blog.tpl */
+#buttonCheckUrl {
+    clear: left;
+    float: left;
+    margin: 10px 0 0 0;
+	}
+	
+.buttonDisabled {
+    color: #aaa;
+	cursor: default;
+	}
+	
+#buttonReserveUrl {
+	clear: left;
+	float: left;
+	margin: 5px 0 0;
+	}
+
+#chooseCommunityAddress {
+    float: left;
+    margin: 20px 0 0 10px;
+    width: 100%;
+	}
+	#chooseCommunityAddress input, 
+	#chooseCommunityAddress select, 
+	#chooseCommunityAddress span {
+	    font-size: 11px;
+		}
+
+.searchResults table {
+	position: relative; /* IE7 */
+	}
+	
+.sendBlog div.largeSelectionBoxBottom,
+.sendBlog div.largeSelectionBoxTop,
+.sendRecpient div.largeSelectionBoxBottom,
+.sendRecpient div.largeSelectionBoxTop {
+	margin-left: 10px;
+	}	
+
+.sendBlog div.LeftColumn {
+	margin-right: 45px;
+	margin-left: 10px;
+	width: auto;
+	}
+
+.sendBlog div.RightColumn {
+	width: auto;
+	}
+		
+.spanLoading {
+    background: url(../images/icons/ajax-loader-red-on-yellow.gif) no-repeat;
+	}
+
+.spanUrl {
+	display: block;
+	}
+
+#spanUrlMessage {
+	color: #1d8411;
+	float: left;
+	height: 40px;
+	margin: 12px 0 -15px 20px;
+	}
+	#spanUrlMessage strong {
+		color: #f00;
+		}	
+
+#submitMessageEdit {
+	clear: both;
+	margin-left: 10px;
+	}
+	
+#textinputDomain, 
+#textinputCampaignPath {
+	display: inline;
+	margin-bottom: 0;
+	width: 120px;
+	}
+
+/* sendBlogsLists.css --> send/blogslists.tpl */
+.sendBlog div.medSelectionBoxItem .spanUrl{
+    clear: left;
+    font-size: 10px;
+    padding-left: 35px;
+	}
+
+/* sendPending.css --> send/pending.css */
+#pendingPagingBottom, #pendingPagingTop, #messageListingBottom {
+	float: right;
+	clear: right;
+	}
+
+#resultMessageTable {
+	position:absolute; 
+	display:none; 
+	z-index:200; 
+	width:360px; 
+	height:250px; 
+	background:#DDEEFF;  
+	padding:20px 10px 10px; 
+	border: 2px 
+	solid #899CB0;
+	}
+	#resultMessageTable #closeDialog {
+		background-color: #fff;
+		position: absolute;
+			top: 6px;
+			right: 6px;
+		}
+
+	#resultMessageTableInner {
+		width:96%; 
+		text-align:center; 
+		margin-left:auto; 
+		margin-right:auto;
+	}
+
+table.pendingMessageDataGrid {
+	margin-bottom: 0;
+	margin-top: 0;
+	}
+	/* table heading styles for split testing */
+	.pendingMessageDataGrid th#splitVersionCol {
+		width: 300px;
+		}
+	.pendingMessageDataGrid th#splitStatsCol {
+		width: 300px;
+		}
+	.pendingMessageDataGrid th#splitButtonsCol {
+		width: 120px;
+		}
+	.pendingMessageDataGrid td h3 {
+		font-family: Arial;
+		margin-top: 2px;
+		}
+	/* Pending Msgs table headings */
+	.pendingMessageDataGrid th#pendingSub {
+		width: 200px;
+		}
+	.pendingMessageDataGrid th#pendingStat {
+		width: 327px;
+		}
+	.pendingMessageDataGrid th#pendingRecipients {
+		width: 124px;	
+		}
+	.pendingMessageDataGrid a {
+		font-size: 10px;
+		}
+	.pendingMessageDataGrid .campaignInfo {
+		color: #333;
+		font-family: Arial;
+		font-size: 10px;
+		margin-right: 2px;
+		}
+		.pendingMessageDataGrid .campaignInfo span {
+			color: #777;
+			}
+	.pendingMessageDataGrid p {
+		margin-bottom: 4px;
+		}
+	.pendingMessageDataGrid tbody {
+		vertical-align: top;
+		}
+	.pendingMessageDataGrid .numeric {
+		padding-right: 15px;
+		text-align: right;
+		}
+
+table#statusLegend {
+	float: left;
+	width: 180px;
+	margin-left: 25px;
+	}
+	table#statusLegend th {
+		text-align: center;
+		}
+	
+table.meterTable {
+	border: 1px solid #ccc;
+	width: 98%;
+	}
+	table.meterTable td {
+		border-bottom: 0;
+		font-size: 4px;
+		padding: 0;
+		}
+		table.meterTable td.archiveMeter,
+		table.meterTable td.doneMeter {
+			background-color: #269;
+			}
+		table.meterTable td.readyMeter,
+		table.meterTable td.sendingMeter {
+		    background-color: #fff;
+			}
+			table.meterTable td.admin {
+				background-color: #00FF00;
+				}
+
+.sendPending div#pagination {
+	float: right;
+	height: 40px;
+	margin: 0 225px -5px 0;
+	text-align: right;
+	width: 400px;
+	}
+
+tr.trDataGridHighlighted td {
+	background-color: #ffd;
+	}
+
+tr.trDataGridRow td.aboveProgressMeter {
+	border-bottom: 0;
+	}
+
+/* sendRecipient.css --> send/confirmadvanced.tpl, send/confirmation.tpl, send/recipient.tpl */
+#confirmAdvancedMode p {
+	margin: 10px 0;
+	}
+
+div.divSendMessageCampaign,
+div.divSendMessageContents {
+	margin-left: 70px;
+	}
+	
+.sendRecipient .helpLink {
+	margin-top: 2px;
+	}
+
+img.imgMessagePartCheck {
+	position: absolute;
+	margin-left: 10px;
+	}
+
+#sendAdvancedChart {
+	margin: 0 0 20px;
+	}
+	#sendAdvancedChart th,
+	#sendAdvancedChart td {
+		margin: 0;
+		padding: 4px;
+		text-align: left;
+		}
+	.sendAdvancedChartExclude {
+		background-color: #F1C9C6;
+		}
+	.sendAdvancedChartExcludeNull {
+		background-color: #FFF0F0;
+		}
+
+	.sendAdvancedChartInclude {
+		background-color: #C7E1C1;
+		}
+	.sendAdvancedChartIncludeNull {
+		background-color: #F0FFF0;
+		}
+	
+	.sendAdvancedChartResult {
+		background-color: #CCCCCC;
+		}
+	.sendAdvancedChartResultNull {
+		background-color: #F0F0F0;
+		}
+
+#sendAdvancedVennDiagram {
+	margin: 10px 0;
+	}
+
+#sendInterfaceMode {
+	float: right;
+	}
+	#sendInterfaceMode div {
+		float: left;
+		margin: 5px 15px 0 0;
+		}
+	#sendInterfaceMode input {
+		float: left;
+		}
+		#sendInterfaceMode input.radio {
+			margin: 3px 3px 0 0;
+			}
+		#sendInterfaceMode input.submit {
+			font-size: 12px;
+			margin: -3px 10px 0 0;
+			}
+	#sendInterfaceMode label {
+		display: inline;
+		margin: 0;
+		}
+		
+/* sendRecipientsLists.css --> send/confirmadvanced.tpl, send/recipientslists.tpl */
+div.selectListGroup,
+div.selectSegment {
+	clear: both;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	}
+	div.selectSegment {
+		margin-left: 25px;
+		}
+	div.selectListGroup label,
+	div.selectSegment label {
+		display: inline;
+		font-size: 12px;
+		margin-top: 0;
+		}
+
+#excludeListTitle {
+	color: #B92C24;
+	}
+		
+#includeListTitle {
+	color: #418B36;
+	}
+
+.sendRecipientsLists input.checkbox {
+	float: left;
+	margin: 0 5px 10px 10px;
+	}
+	#cbEmailShareBar {
+		clear: left;
+		}
+
+#pnaControls div.LeftColumn,
+#pnaControls div.RightColumn {
+	margin-left: 0;
+	margin-top: 20px;
+	width: auto;
+	}
+	#pnaControls div.LeftColumn {
+		margin-right: 65px;
+		}
+	
+#publishToArchive,
+#emailShareBar {
+	clear: left;
+	margin: 0 0 10px 0;
+	}
+	#publishToArchive label.lblCheckbox,
+	#emailShareBar label.lblCheckbox {
+		margin-top: 0;
+		}	
+	#publishToArchive input,
+	#publishToArchive select,
+	#publishToArchive span {
+		font-size: 11px;
+		}
+	
+#publishToArchive span.replacedUrlInput {
+	font-size: 11px;
+	}
+
+#recipientCount #buttonPreview {
+	display: inline;
+	margin-bottom: 0;
+	margin-left: 8px;
+	}
+
+#recipientExcludeCount, 
+#recipientIncludeCount {
+	font-size: 11px;
+	padding: 3px 0 0 0;
+	}
+	#recipientExcludeCount .count, 
+	#recipientIncludeCount .count {
+		font-weight: bold;
+		}
+	#recipientExcludeCount p, 
+	#recipientIncludeCount p {
+		border-top: 1px solid #EEE;
+		margin: 0;
+		padding-top: 7px;
+		text-align: center;
+		}
+
+#recipientSelectAdvancedExclude,
+#recipientSelectAdvancedInclude {
+	clear: none;
+	float: left;
+	width: 330px;
+	}
+	#recipientSelectAdvancedExclude {
+		margin-left: 20px;
+		}
+	#recipientSelectAdvancedExclude .largeSelectionBoxBottom,
+	#recipientSelectAdvancedExclude .largeSelectionBoxMiddle,
+	#recipientSelectAdvancedExclude .largeSelectionBoxTop,
+	#recipientSelectAdvancedInclude .largeSelectionBoxBottom,
+	#recipientSelectAdvancedInclude .largeSelectionBoxMiddle,
+	#recipientSelectAdvancedInclude .largeSelectionBoxTop {
+		width: 330px;
+		}
+	#recipientSelectAdvancedExclude .largeSelectionBoxBottom {
+		background: url(../images/halfSelectionBoxBottomRed.png) no-repeat;
+		clear: none;
+		}
+	#recipientSelectAdvancedExclude .largeSelectionBoxMiddle {
+		background: url(../images/halfSelectionBoxMiddleRed.png);
+		}
+	#recipientSelectAdvancedExclude .largeSelectionBoxTop {
+		background: url(../images/halfSelectionBoxTopRed.png) no-repeat;
+		clear: none;
+		}
+	#recipientSelectAdvancedInclude .largeSelectionBoxBottom {
+		background: url(../images/halfSelectionBoxBottomGreen.png) no-repeat;
+		clear: none;
+		}
+	#recipientSelectAdvancedInclude .largeSelectionBoxMiddle {
+		background: url(../images/halfSelectionBoxMiddleGreen.png);
+		}
+	#recipientSelectAdvancedInclude .largeSelectionBoxTop {
+		background: url(../images/halfSelectionBoxTopGreen.png) no-repeat;
+		clear: none;
+		}
+
+.recipientSelectOtherSegments {
+	clear: both;
+	font-weight: bold;
+	font-size: 12px;
+	padding: 0 0 5px 15px;
+	}
+
+/* sendRssIn.css --> send/rssin.tpl */
+div.Hideable {
+	display: none;
+	}
+
+div.Show {
+	display: block;
+	}
+
+fieldset.fsSettings dl dd {
+	clear: both;
+	padding: 0 0 0 20px;
+	margin: 0 0 10px 0;
+	}
+	fieldset.fsSettings dl label {
+		clear: right;
+		float: left;
+		font-weight: bold;
+		margin: 0;
+		}
+fieldset.fsSettings .SendButton {
+	float: left;
+	margin: 0 5px 0 0;
+	}
+
+/* sendSurveyByLink.css --> surveyByLink.tpl */
+.divMessage p.surveyLink {
+	font-size: 13px;
+	}
+
+/* settingsBlog.css --> settings/blog.tpl */
+.settingsBlog .LeftColumn input, 
+.settingsBlog .LeftColumn textarea {
+	width: 300px;
+	}
+
+.settingsBlog .screenshot {
+	border: 1px solid #ccc;
+	margin: 0 0 20px;
+	}
+	
+/* settingsCampaignEdit.css --> campaign/edit.tpl */
+div.ChannelPanel {
+	position: relative;
+	background: url(../images/panel-box-top-364.png) no-repeat;
+	width: 339px;
+	padding: 10px 10px 0 15px;
+	margin: 25px 0 0 0;
+	}
+
+	div.ChannelPanel .CreateNew {
+		display: block;
+		padding: 10px 0;
+		}
+
+	div.ChannelPanel h3 {
+		padding: 0 0 5px 30px;
+		}
+
+	div.ChannelPanel img {
+		position: absolute;
+		top: -12px;
+		left: -17px;
+		}
+
+div.ChannelPanelBottom {
+	background: url(../images/panel-box-bottom-364.png) no-repeat;
+	width: 364px;
+	height: 6px;
+	}
+
+.settingsCampaignEdit div.LeftColumn {
+	margin-right: 15px;
+	width: 325px;
+	}
+
+div#divPNAPanel label {
+	float: left;
+	margin-top: 5px;
+	}
+
+#deleteArchiveButton {
+	float: right;
+	margin: 0 4px 0 0;
+	}
+
+.settingsCampaignEdit div.RightColumn {
+	width: 340px;
+	}
+
+.settingsCampaignEdit table.tableDataGrid {
+	border: 0;
+	margin: 0;
+	}
+	.settingsCampaignEdit table.tableDataGrid td.tdChannelTitle {
+		padding-left: 0;
+		padding-top: 12px;
+		}
+
+.settingsCampaignEdit .tdImageButton input {
+	margin: 0;
+	}
+
+div.ChannelLink {
+	font-size: 10px;
+	clear: both;
+	padding: 0 0 5px 0;
+	}
+
+#divClickTracking {
+	clear: both;
+	padding-top: 10px;
+	}
+
+#divCanSpam div.LeftColumn {
+	width: 400px;
+	}
+
+#divCanSpam div.RightColumn {
+	background-color: #ffffee;
+	border: 1px solid #bbbbbb;
+	float: right;
+	margin-right: 10px;
+	padding: 20px 15px 20px 15px;
+	text-align: justify;
+	width: 220px;
+	}
+
+#divCampaignOptions input, 
+#divCampaignOptions textarea {
+	width: 310px;
+	}
+
+input.cb {
+	float: left;
+	margin: 5px 5px 0 0;
+	}
+
+/* settingsCancelSmallAcct.css --> cancel_smallacct.tpl */
+div.divIndent {
+	margin-left: 30px;
+	}
+	
+fieldset#confirmCancel input {
+	clear: left;
+	float: left;
+	margin: 5px 0 0 30px;
+	}
+	
+fieldset#confirmCancel label {
+	float: left;
+	margin: 5px 0 0 5px;
+	}
+
+p.noteText {
+	font-size: 10px;
+	}
+
+/* signupFormFields.css --> signup/fields.tpl */
+.signupFormFields #addToList div {
+	clear: left;
+	}
+	
+.communityLink {
+	font-size: 10px;
+	}
+	
+#example {
+	clear: left;
+	margin-bottom: 0;
+	}
+
+fieldset.singleListFieldset {
+	margin-bottom: 0;
+	}
+
+.signupFormFields #ManyCampaigns select {
+	width: 100%;
+	}
+	
+.publisherProfile {
+	margin-bottom: 0;
+	}
+	
+#signUpScreen {
+	margin: 5px 0 0 0;	
+	}
+
+#signupSubFieldsDataGrid input,
+#signupSubFieldsDataGrid select {
+	margin-bottom: 0;
+	}
+
+div.ContentContainer p.singleListCopy {
+	margin: 0;
+	padding: 5px 0 20px;
+	}
+
+table.tableSignupOptions label {
+	margin-top: 14px;
+	}
+
+table.tableSignupOptions td {
+	border-bottom: 0;
+	padding: 0 6px;
+	}
+
+td.tdSignupInclude input,
+td.tdSignupRequire input {
+	margin-left: 18px;
+	}
+
+td.tdSignupOptions label {
+	line-height: 100%;
+	margin-bottom: 3px;
+	}
+	
+td.tdSignupOptions div.LeftColumn {
+	margin-right: 15px;
+	width: 60px;
+	}
+
+td.tdSignupOptions div.RightColumn {
+	width: 300px;
+	}
+
+tr.trDataGridRow td.tdSignupOptions,
+tr.trDataGridRow td.tdSignupOptions td  {
+	background-color: #eef;
+	}
+	
+tr.trSignupFieldType label {
+	margin-bottom: 0;
+	margin-top: 0;
+	}
+
+tr.trSignupFieldType td {
+	background-color: #cce;
+	}
+
+/* signupGenerate.css --> signup/generate.tpl */
+.automaticOrManual {
+	background-color: #fff;
+	color: #264978;
+	font-family: 'Trebuchet MS', 'Nimbus Sans L', Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 0 25px;
+	position: absolute;
+		left: 300px;
+		top: -10px;
+	text-transform: uppercase;
+	}
+
+#automaticSignup,
+#manualSignup {
+	font-size: 14px;
+	height: 150px;
+	}
+	#automaticSignup {
+		width: 100%;
+		}
+	#manualSignup {
+		width: 430px;
+		}
+
+div.hrHeading {
+	position: relative;
+	}
+
+.signupGenerate div.RightColumn {
+	background-color: #ffe;
+	border: 1px solid #bbb;
+	float: right;
+	padding: 20px 15px;
+	text-align: justify;
+	width: 220px;
+	}
+	.signupGenerate div.RightColumn h3 {
+		margin-bottom: 10px;
+		}
+	.signupGenerate div.RightColumn ul {
+		list-style-image: url(../images/ListBullet.png);
+		}
+		.signupGenerate div.RightColumn ul li {
+			margin: 7px 0 0 20px;
+			}
+
+.signupGenerate p input {
+	display: inline;
+	}
+
+#publisherProfileLinks a {
+	margin-left: 10px;
+	}
+
+/* subscriberHistory.css --> mycontacts/history.tpl */
+#calendarWarning {
+	color: #f00;
+	font-size: 9px;
+	font-weight: bold;
+	margin-left: 83px;
+	margin-top: 5px;
+	}
+    
+.column1,
+.column2 {
+    float: left;
+    padding: 4px 8px 2px 12px;
+    }
+    .column2 {
+    	padding-right: 0;
+    	}
+    	
+.subscriberHistory .datepicker_wrap img.datepicker_trigger {
+	margin-top: -2px;
+	}     	
+    
+.subscriberHistory div.ContentContainer p.added {
+	color: #666;
+	font-size: 11px;
+	margin-bottom: 25px;
+	}
+    
+#dateOptions,
+.dateOptions {
+    margin-bottom: 10px;    
+    }
+    #dateOptions input,
+    .dateOptions input {
+        width: 80px;
+        }
+    .dateOptions input.longYear {
+    	width: 95px;
+    }
+    .dateOptions .ui-datepicker-trigger {
+    	margin: 0 0 -3px 2px;
+    	}
+
+.subscriberHistory fieldset#wrapper {
+    padding: 0 0 0 10px;
+    }
+
+.subscriberHistory h3 {
+	clear: left;
+	color: #000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: normal; 
+	}
+	.subscriberHistory h3 a {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 9px;
+		margin: 0 0 0 5px;
+		position: relative;
+		}
+
+#historyDataGrid {
+	border-collapse: collapse;
+	clear: both;
+	margin: 0;
+	}
+	#historyDataGrid td {
+		border-bottom: 1px solid #269;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 11px;
+		}
+		#historyDataGrid td.timestamp,
+		#historyDataGrid th.timestamp {
+			width: 110px;
+			}
+		
+#historyFilters {
+    width: 710px;   
+    }
+
+.invalidDate {
+	background-color: #FFB2B2;
+	}
+
+#subHistoryC1,
+#subHistoryC2 {
+    float: left;
+    padding: 6px 0;    
+    }
+    #subHistoryC1 {
+    	padding-left: 8px;
+    	padding-right: 20px;
+    	width: 293px;
+    	}
+    #subHistoryC1 img {
+        margin-bottom: 2px;
+        }
+    .dateOptions .queryOption input,
+    #subHistoryC1 input,
+    #subHistoryC2 input {
+        display: inline;
+        margin: 0;
+        }
+        #subHistoryC1 input#historySearchButton {
+			margin-left: -10px;
+			}
+	.dateOptions .queryOption label,
+    #subHistoryC1 label {
+        display: inline;
+        }
+    #subHistoryC2 label {
+        clear: right;
+        font-size: 12px;
+        margin-bottom: 2px;
+        }
+	#subHistoryC2 legend.likeALabel {
+		margin-bottom: 0;
+		}
+    #subHistoryC1 #performer {
+        margin: 0 0 8px;
+        }
+	fieldset.sameLine label,
+	fieldset.sameLine select,
+	fieldset.sameLine input,
+    #subHistoryC1 select {
+        display: inline;
+        margin: 0;
+        }   
+
+#wrapper input,
+.wrapper input {
+	font-size: 11px;	
+	}
+
+#wrapper label,
+.wrapper label {
+    margin: 0;
+    }   
+	
+#wrapper select
+.wrapper select {
+	font-size: 11px;
+	width: 80px;
+	}
+
+/* survey.css --> survey/edit.tpl */
+#dfnUseLogoDisabled {
+	margin-left: 20px;
+	}
+
+.editSurvey .checkbox {
+	margin-top: 20px;
+	}
+
+.editSurvey .type .cbLeft {
+	clear: left;
+	margin-bottom: 0;
+	}
+.editSurvey .type label {
+	margin-bottom: 6px;
+	margin-top: 0;
+	}
+
+/* surveyAnswers.css --> track/survey_answers.tpl */
+.surveyAnswers tr.trSurveyResultBottom td {
+	background-color: #def;
+	}
+
+/* surveyReports.css --> track/survey_reports.tpl */
+.surveyReports #columnContainer {
+	float: left;
+	width: 100%;
+	}
+
+.surveyReports #columnLeft {
+	float: left;
+	width: 70%;
+	}
+
+.surveyReports #columnRight {
+	float: right;
+	width: 25%;
+	}
+
+div.divPercentBar {
+	background-color: #269;
+    border-right: 1px solid #269;
+    height: 16px;
+	}
+
+.olQuestions {
+	margin-left: 30px;
+	}
+
+tr.trSurveyResultBottom td {
+	border-bottom: 1px solid #269;
+	}
+
+tr.trSurveyResultTotal td {
+	background-color: #def;
+	}
+
+/* trackAll.css --> track/all.tpl */
+div.divCantPublish {
+	color: #f00;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 40px 20px;
+	text-align: center;
+	width: 320px;
+	}
+
+div.divMessageFeed {
+	background: url(../images/feedpanel.png) no-repeat;
+	height: 235px;
+	position: absolute;
+		right: -20px;
+	display: none;
+	width: 362px;
+	z-index: 10;
+	}	
+
+div.divMessageFeedContainer {
+	position: relative;
+	text-align: left;
+	}
+	
+div.divMessageFeedContent p {
+	margin: 5px 15px 0 15px;
+	}
+		
+div.divMessageFeedSettings {
+	border: 1px dashed #AAA;
+	height: 125px;
+	margin: 10px 15px 5px;
+	overflow: auto;
+	padding: 2px;
+	text-align: left;
+	width: 330px;
+	}	
+	div.divMessageFeedSettings .cbPublished {
+		float: left;
+		}		
+	div.divMessageFeedSettings input {
+		margin-bottom: 0;
+		margin-top: 0;
+		}		
+	div.divMessageFeedSettings input[type="checkbox"] {
+		margin: 0 10px 0 3px;
+		}		
+	div.divMessageFeedSettings .inputTags {
+		width: 275px;
+		}		
+	div.divMessageFeedSettings label {
+		margin: 0 0 3px;
+		}	
+		
+div.divMessageFeedMetaData {
+	margin-left: 26px;
+	}
+	
+div#divMessagesPagingBottom {
+	text-align: right;
+	}
+	div#divMessagesPagingBottom br {
+		clear: none;
+		}
+
+div#divMessagesPagingTop {
+	margin-top: 15px;
+	text-align: right;
+	}
+	
+div.divPubMessage {
+	height: 20px;
+	text-align: center;
+	}	
+	
+div.divSelectAllNone {
+	float: left;
+	padding: 2px 0 0 3px;
+	}
+	div.divSelectAllNone a {
+		text-decoration: none;
+		}
+	
+div.divTrackAllFilter {
+	float: left;
+	margin-right: 10px;
+	}
+	
+#fieldsetTrackAllFilter {
+	margin-bottom: 0;
+	}
+	#fieldsetTrackAllFilter select {
+		width: 320px;
+		}
+		
+input.buttonCloseMessageFeed {
+	float: right;
+	font-size: 10px;
+	margin-right: 13px;
+	}
+	center input.buttonCloseMessageFeed {
+		float: none;
+		}	
+		
+input.buttonMessageFeed {
+	font-size: 10px;
+	float: left;
+	margin-left: 15px;
+	margin-right: 10px;
+	}
+	
+#resetLink {
+	clear: left;
+	}
+
+#submitCompareSelected {
+	margin-top: 20px;
+	}
+
+.trackAll #trackMessageDataGrid {
+	margin-bottom: 0;
+	margin-top: 5px;
+	}
+
+/* trackAutoresponders.css --> track/autoresponders.tpl */
+table.tableDataGrid td.tdARTrackNumberColumn {
+    text-align: right;
+    padding-right: 5%;
+	}
+
+/* trackAutoresponderSequence.css --> track/ar_sequence.tpl */
+
+#fieldsetTime div {
+	float: left;
+    margin-right: 25px;
+	}
+	#fieldsetTime div.reset {
+	    clear: left;
+	    white-space: nowrap; /* IE */
+		}
+	
+#fieldsetTime input {
+	float: left;
+	margin-bottom: -20px;
+	}
+	
+#fieldsetTime select {
+	float: left;
+    margin-top: 3px;
+	}
+
+table.tableDataGrid td.tdStatColumn {
+	padding-right: 15px;
+	text-align: right;
+	}
+		
+table.tableDataGrid th.thStatColumn {
+    text-align: right;
+	}
+
+/* tracking.css --> track/dashboard.tpl */
+.clear {
+	clear: both;
+	height: 1px;
+	margin-top: -1px;
+	overflow: hidden;
+	}
+
+.tracking div.ContentContainer {
+	color: #666;
+	}
+
+.tracking #divContentFrame {
+	font-family: 'Trebuchet MS', 'Nimbus Sans L', Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	}
+		
+.featured {
+	background: url(../images/tracking/bg-featured.png) no-repeat;
+	clear: left;
+	min-height: 155px;
+	margin: 0 0 15px;
+	padding: 7px 13px 0;
+	position: relative;
+	}
+	.featured dd {
+		color: #333;
+		margin: 0 0 0 5.83em;
+		}
+	.featured dl {
+		margin: 0 0 19px;
+		position: relative; /* IE */
+		}
+	.featured dt {
+		clear: left;	
+		float: left;
+		position: relative; /* IE */
+		}
+	.featured .footnote {
+		position: absolute;
+			right: 75px;
+			top: 153px;
+		}
+		.featured .footnote em {
+			font-style: normal;
+			font-weight: bold;
+			}
+	.featured .fullReport {
+		background: url(../images/tracking/bg-full-report.png) no-repeat 100% 0;
+		float: left;
+		margin-right: 5px;
+		}
+		.featured .fullReport:hover  {
+			background-position: 100% -40px;
+			}
+		.featured .fullReport a {
+			background: #fff url(../images/tracking/bg-full-report.png) no-repeat;
+			color: #fff;
+			float: left;
+			margin: 0 17px 0 0;
+			padding: 2px 6px 13px 8px;
+			text-decoration: none;
+			}
+			.featured .fullReport:hover a, .featured .fullReport a:hover {
+				background-position: 0 -40px;
+				}			
+	.featured .graph {
+		height: 145px;
+		overflow: hidden;
+		position: absolute;
+			right: 15px;
+			top: .5em;
+		}			
+	.featured h3 {
+		margin: 0 0 7px 0;
+		}
+	.featured .text {
+		width: 300px;
+		}
+	.featured .viewComments {
+		float: left;
+		font-size: 11px;
+		margin-top: 3px;
+		}
+	
+.tracking h3,
+.tracking h4 {
+	color: #333;
+	font-size: 15px;
+	font-weight: normal;
+	}
+	.tracking .graph h4 {
+		line-height: 100%;
+		margin: 0 0 10px;
+		}
+
+#navTracking {
+	float: right;
+	font-size: 11px;
+	list-style: none;
+	margin: 5px 3px 0;
+	}
+	#navTracking li {
+		float: left;
+		margin: 0 0 0 25px;		
+		}					
+	
+.selector {
+	background: url(../images/tracking/bg-selector.png) no-repeat 0 100%;
+	border-bottom: 7px solid #7cabcf;
+	float: left;
+	margin: 20px 0 30px;
+	padding: 0 0 15px;
+	}
+	.selector .followed {
+		border-bottom: 3px solid #94bbd8;
+		margin: 0 0 15px;
+		padding: 0 0 12px;
+		}
+	.selector h3 select,
+	.selector h4 select {
+		color: #333;
+		display: inline;
+		font-size: 11px;
+		margin: 0 3px;
+		vertical-align: middle;
+		width: 80px;
+		}				
+	.selector .half {
+		float: left;
+		width: 355px;
+		}
+		.selector .half img {
+			clear: left;
+			display: block;
+			float: left;
+			}
+	.selector .header {
+		background: #7cabcf url(../images/tracking/bg-header.png) no-repeat;
+		margin: 0 0 10px;
+		padding: 8px 7px 3px;
+		}
+		.selector .header h3 {
+			color: #fff;
+			}		
+	.selector .one {
+		position: relative;
+		width: 364px;
+		}	
+	.selector .select h3, 
+	.selector .select h4 {
+		margin-bottom: 5px;
+		}
+	.selector .two {
+		margin: 0 0 0 -10px;
+		width: 346px;
+		}				
+	.selector ul {
+		background: url(../images/tracking/bg-indicator.png) no-repeat 100% 52px;
+		height: 290px;
+		list-style: none;
+		position: absolute;
+			left: 0;
+			top: 0;
+		width: 344px;
+		}
+		.selector .clicks ul {
+			background-position: 100% 160px;
+			}	
+		.selector ul li {
+			border-top: 1px dotted #A0C2DC;
+			font-weight: bold;
+			padding: 35px 0 0;
+			position: absolute;
+				right: 15px;
+			text-align: right;
+			width: 308px;
+			}					
+			.selector ul li.clicks {
+				top: 150px;
+				}
+			.selector ul li.views {
+				top: 44px;
+				}
+			.selector ul li span {
+				display: block;
+				font-weight: normal;
+				}
+
+/* trackingTour.css --> track/tour.tpl */
+.breadcrumbs {
+	list-style: none;
+	}
+	.breadcrumbs li {
+		display: inline;
+		float: left;
+		margin: 0 20px 20px 0;
+		}
+	.breadcrumbs li.selected {
+		background: 0;
+		font-weight: bold;
+		}
+		
+#content {
+	clear: left;
+	}
+	#content dd {
+		margin-left: 30px;
+		}
+	#content div {
+		border-top: 1px dotted #ccc;
+		clear: both;
+		padding: 15px 0;
+		}		
+	#content dl {
+		margin-bottom: 15px;
+		}
+	#content dt {
+		font-weight: bold;
+		}	
+	#content img {
+		margin-bottom: 15px;
+		}
+		#content img.right {
+			float: right;
+			margin-bottom: 0;
+			margin-left: 40px;
+			}
+			#content div img.right {
+				margin-bottom: 15px;
+				}
+	#content ol {
+		list-style-type: none;
+		}
+		#content ol li {
+			background: url(../images/tours/tDashboard/iconA.jpg) no-repeat;
+			padding: 2px 0 15px 26px;
+			position: relative; /* IE6 */
+			}
+			#content ol li.b {
+				background-image: url(../images/tours/tDashboard/iconB.jpg);
+				}
+			#content ol li.c {
+				background-image: url(../images/tours/tDashboard/iconC.jpg);
+				}
+	
+.trackingTour .ContentContainer {
+	position: relative;
+	}
+	.trackingTour .ContentContainer h2 {
+		margin: 0 50px 5px 0;
+		}		
+	.trackingTour .ContentContainer h3 {
+		clear: both;
+		margin-bottom: 12px;
+		}		
+	.trackingTour .ContentContainer h4 {
+		color: #000;
+		margin-bottom: 12px;
+		}
+	
+#dashboard {
+	margin: 0;
+	position: absolute;
+		right: 0;
+		top: 10px;
+	}
+	
+.nav {
+	font: 11px/100% Arial, Helvetica, sans-serif;
+	}
+
+/* trackMessage.css --> track/message.tpl */
+#buttonRefresh,
+#checkboxExpanded,
+#dropdownlistReportCategory,
+.labelFormFieldReportCategory {
+	float: left;
+	line-height: 100%;	
+	}
+	#buttonRefresh,
+	#buttonSaveAsSegment {
+		margin: 0 0 0 20px;
+		}	
+	#checkboxExpanded {
+		margin: 12px 4px 0 0;
+		}
+	#dropdownlistReportCategory {
+		margin-right: 40px;
+		margin-top: 10px;
+		}
+	.labelFormFieldReportCategory {
+		margin-right: 5px;
+		}
+	
+div#divFeeds, div#divClickReport {
+	clear: both;
+    }
+div#divSplitTestStatistics {
+	float: right;
+	}
+div#divMessageStatistics {
+	margin-left: 10px;
+	float: right;
+	width: 530px;
+	}
+	div#divMessageStatistics table#tableMessageStatistics {
+		margin-top: 0;
+		}
+		div#divMessageStatistics table#tableMessageStatistics .tableLabels {
+		width: 228px;
+		}
+		div#divMessageStatistics table#tableMessageStatistics .pieChartPercent, div#divSplitTestStatistics table#tableMessageStatistics .pieChartPercent {
+			position: relative;
+			width: 50px;
+			text-align: right;
+			float: left;
+			margin-left: -70px;
+		}
+		div#divMessageStatistics table#tableMessageStatistics .pieChartKey, div#divSplitTestStatistics table#tableMessageStatistics .pieChartKey {
+			position: relative;
+			width: 10px;
+			height: 10px;
+			float: left;
+			margin: 0 5px 0 -15px;
+			margin-top: 3px;
+			text-indent: -9999px;
+	    	}
+	    	div#divMessageStatistics table#tableMessageStatistics .pieChartKey.bounces, div#divSplitTestStatistics table#tableMessageStatistics .pieChartKey.bounces {
+				background: #9d3636;
+				background: -moz-linear-gradient(top,  #F47061,  #702124);
+				background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F47061), to(#702124));
+				filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#F47061', endColorstr='#702124');
+    			-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#F47061', endColorstr='#702124')";
+            	}
+            div#divMessageStatistics table#tableMessageStatistics .pieChartKey.opens, div#divSplitTestStatistics table#tableMessageStatistics .pieChartKey.opens {
+				background: #539d36;
+				background:  -webkit-gradient(linear, 0% 0%, 0% 100%, from(#a5f96f), to(#3e5e2d));
+				filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#a5f96f', endColorstr='#3e5e2d');
+    			-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#a5f96f', endColorstr='#3e5e2d')";
+				}
+			div#divMessageStatistics table#tableMessageStatistics .pieChartKey.neither, div#divSplitTestStatistics table#tableMessageStatistics .pieChartKey.neither {
+				background: #36569d;
+				background:  -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5aadfb), to(#1e3c84));
+				filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#5aadfb', endColorstr='#1e3c84');
+    			-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#5aadfb', endColorstr='#1e3c84')";
+				}
+
+div#emailStatisticsPiechart {
+	float: left;
+	}
+	div#emailStatisticsPiechart p {
+		color: #666;
+		font-size: 11pt;
+		margin: 10px 0 0 0;
+		text-align: center;
+		}
+div#divSocialMediaStatistics {
+	clear: both;
+	}
+
+div#divLists,
+div#divSplitResults {
+	float: left;
+	}
+	div#divSplitTestStatistics,
+	div#divSplitResults table#tableSplitResults {
+		width: 350px;
+		}
+	div#divSplitResults table#tableSplitResults {
+		margin-bottom: 4px;
+		}
+	div#divSplitResults .footnote {
+		color: #111;
+		font-size: 10px;
+		}
+	table#tableMessageProperties a.action {
+		font-size: 8pt;
+		font-weight: bold;
+		text-decoration: underline;
+		}
+div#divLists {
+	width: 100%;
+	}
+
+div#divPieChart {
+	text-align: center;
+	}
+
+.trackMessage div#pagination {
+	margin-bottom: 5px;
+	text-align: right;
+	}
+
+.tableExclude {
+	background-color: #90B2CC;
+	border-bottom: 1px solid #269;
+	font-size: 12px;
+	font-weight: bold;
+	}
+
+table.tableStatGrid {
+	clear: left;
+	}
+
+/* userSettings.css --> folders/usersettings.tpl */
+#bEnabled {
+	float: left;
+	margin-right: 5px;
+	}
+	
+#ColumnOne {
+	float: left;
+	width: 250px;
+	}
+	
+#ColumnTwo {
+	float: left;
+	width: 300px;
+	}
+	
+#fsUserSettings {
+	float: left;
+ 	width: 570px;
+	}
+
+/* whatsNew.css --> static/WhatsNew.tpl */
+.whatsNew dd {
+	margin-bottom: 15px;
+	}
+	
+.whatsNew dl {
+	margin-bottom: 15px;
+	margin-left: 10px;
+	}
+
+.whatsNew dt {
+	font-weight: bold;
+	}
+	
+.whatsNew h3 {
+	font-size: 16px;
+	margin-bottom: 15px;
+	}
+
+/* footer/create.tpl */
+#copyFooter {
+	border: 1px solid #ccc;
+	padding: 5px;
+	}
+	#copyFooter label {
+		margin-top: 0;
+		}
+
+#existingFooters {
+	display: inline;
+	}
+
+/* simple layout from blank template */
+body.noNav #divTabMenu {
+	width: 760px;
+}
+
+/* password/change.tpl */
+.note {
+	font-size: .8em;
+	}
+	div.note p {
+		margin: 0;
+		}
+
+.sidebar {
+	float: right;
+	margin-top: 15px;
+	}
+	.sidebar ul {
+		margin-top: 0;
+		padding-top: 0;
+		}
+		.sidebar ul li {
+			margin-left: 2em;
+			}
+			
+/* HELP WINDOW */
+
+#helpDialog {
+	background-color: #8CC1DF; /* LIGHT BLUE - SIMULATE 50% OPACITY */
+	border: 4px solid #8CC1DF; /* LIGHT BLUE - SIMULATE 50% OPACITY */
+	border-width: 4px 0 0 4px;
+	overflow: hidden;
+	padding: 0 5px 5px 0;
+	position: fixed;
+	_position: absolute;
+	z-index: 99;
+	-moz-border-radius-topleft:17px;
+	-webkit-border-radius-topleft:17px;
+	} 
+
+	#helpDialog .controls {
+		height: 30px;
+		position: absolute;
+		width: 100%;
+		z-index: 1;
+		}
+	
+		#helpDialog .controls #helpCloseButton,
+		#helpDialog .controls #helpMinimizeButton {
+			color:#005588; /* iCONTACT BLUE */
+			font-size:10px;
+			position: absolute;
+			text-decoration:none;
+			text-transform:uppercase;
+			}
+			
+			#helpDialog .controls #helpCloseButton {
+				right: 5px;
+				}
+			
+			#helpDialog .controls #helpMinimizeButton {
+				right: 55px;
+				}
+	
+	#helpDialog .ui-tabs-nav {
+		float: left;
+		z-index: 2;
+		}
+	
+	#helpDialogContent .ui-tabs-panel {
+		padding: 0;
+		}
+		
+	#helpDialogContent iframe {
+		border-top:1px solid #CFE7F4; /* VERY LIGHT BLUE */
+		width: 100%;
+		}
+
+#helpDialog .ui-tabs .ui-tabs-nav li a {
+	color:#005588; /* iCONTACT BLUE */
+	font-family:"Trebuchet MS",arial,helvetica;
+	font-style:italic;
+	padding: .4em 1em;
+	}
+	
+	#helpDialog .ui-tabs .ui-tabs-nav,
+	#helpDialog .ui-tabs-nav li a {
+		padding:0;
+		}
+	
+#helpDialog .ui-widget-content,
+#helpDialog .ui-widget-header {
+	background:none;
+	border:0;
+	}
+
+#helpDialog .ui-corner-top {
+	-moz-border-radius-topleft:17px;
+	-moz-border-radius-topright:17px;
+	-webkit-border-radius-topleft:17px;
+	-webkit-border-radius-topright:17px;
+	}
+
+#helpDialog .ui-state-default {
+	border:0;
+	}
+	
+	#helpDialog .ui-state-default,
+	#helpDialog .ui-widget-content .ui-state-default {
+		background:#E6E6E6 url(../images/helpTabBack.png) 50% 50% repeat-x;
+		border:0;
+		}
+	
+	#helpDialog .ui-state-active,
+	#helpDialog .ui-widget-content .ui-state-active {
+		background:#E6E6E6 url(../images/helpTabFront.png) 50% 50% repeat-x;;
+		border:0;
+		}
+		
+#helpDialog.ui-state-disabled {
+	filter:Alpha(Opacity=65);
+	opacity:0.65;
+	}
+
+#helpDialogCover {
+	position: absolute;
+		left: -9999px;
+		top: 0;
+	}
+	
+.templateButtons {
+	border-top: 1px dotted #aaa;
+	clear: both;
+	padding: 10px 0;
+	}
+
+.templateCategoryList {
+	border-right: 1px dotted #c3c3c3;
+	float: left;
+	margin: 0 0 20px 0;
+	padding: 0 13px 0 0;
+	width: 144px;
+	}
+	.templateCategoryList a {
+		text-decoration: none;
+		}
+	.templateCategoryList h3 {
+		margin-bottom: 10px;
+		}
+	.templateCategoryList li {
+		margin: 0 0 10px 0;
+		padding-left: 0;
+		}
+	.templateCategoryList ul {
+		list-style: none;
+		}
+
+.templateCategories ul {
+	list-style-type: none;
+}
+
+.templateThumbnails {
+	float: left;
+	width: 540px;
+	}
+	.templateThumbnails .numResults {
+		margin-left: 24px;
+		}
+		.templateThumbnails .numResults p {
+			margin-bottom: 0;
+			}
+	.templateThumbnails .pagination {
+		clear: both;
+		padding: 15px 0;
+		text-align: center;
+		}
+	.templateThumbnails .thumbnail {
+		border: 1px solid transparent;
+		float: left;
+		height: 220px;
+		margin: 0 0 10px 23px;
+		position: relative;
+		width: 155px;
+		}
+	.templateThumbnails .thumbnail.selected {
+		border-color: #000;
+		background-color: transparent;
+		}
+		.templateThumbnails .thumbnail .goToBottom {
+			position: absolute;
+				bottom: 0; 
+			text-align: center;
+			width: 100%;
+			}
+		.templateThumbnails .thumbnail .goToBottom p {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 10px;
+			margin-bottom: 0;
+			}
+			
+#spamReport .description {
+		border-bottom: 1px solid #666;
+		padding-bottom: 1em;
+	}
+#spamReport .score {
+		line-height: 3em;
+	}
+#spamReport ul {
+		padding-left: 30px;
+		padding-top: 1em;
+	}
+		
+
+#suggestionsDialog {
+	background: #fff;
+	border: 4px solid #8CC1DF; /* LIGHT BLUE - SIMULATE 50% OPACITY */
+	color:#005588; /* iCONTACT BLUE */
+	-moz-border-radius-topright: 17px;
+	-moz-border-radius-bottomright: 17px;
+	-moz-border-radius-bottomleft: 17px;
+	position: absolute;
+	padding: 8px;
+	width: auto;
+	z-index: 201;
+	}
+	#suggestionsDialog.noMisspellings {
+		-moz-border-radius-topright: 0;
+		-moz-border-radius-topleft: 17px;
+		}
+	#suggestionsDialog button {
+		margin-top: 5px;
+		}
+	#suggestionsDialog h4 {
+		float: left;
+		padding-bottom: 10px;
+		}
+	#suggestionsDialog input {
+		margin: 5px 0;
+		}
+	#suggestionsDialog span {
+		display: block;
+		clear: both;
+		}
+	#suggestionsDialog ul {
+		list-style: none;
+		}
+
+.messageTemplate {
+	float: left;
+	margin: 0 0 20px 20px;
+	text-align: center;
+	width: 140px;
+	}
+	.messageTemplate img {
+		width: 150px;
+	}
+	.messageTemplate a.button {
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 6px;
+		width: 100px;
+		}
+	div.messageTemplate p {
+		font-family: Arial, Helvetica, sans-serif;
+		margin: 10px 0 0;
+		}
+
+.templateSelection {
+	float: left;
+	width: 500px;
+	}
+	.templateSelection .message {
+		padding-left: 15px;
+		}
+	.templateSelection .pagination {
+		clear:both;
+		}
+	.templateSelection .rowBreak {
+		clear:both;
+		}
+		
+p#messageArchiveUrl {
+	font-family: courier, monospace;
+	}
+.ui-dialog .ui-dialog-buttonpane {
+	border: none;
+	margin: 0;
+	padding-top: 0;
+	}
+
+/* REMOVE */
+
+.landing {
+	background-color: #F5F0ED;
+	}
+	
+
+
+/* RULES FOR RESKINNED PORTIONS ONLY */
+
+div.ContentContainer .r6 p {
+	margin: 0px;
+	}
+	.r6 p.sub {
+		color: #7a7a7a;
+		font-size: 11px;
+		font-style: italic;
+	}
+	
+.r6 a {
+	font-weight: bold;
+	text-decoration: underline;
+	color: #4774A0;
+	}
+	.r6 a.button {
+		text-decoration: none;
+		}
+		
+.r6.module {
+	background-color: #F4F4F4;
+	border: 2px solid #DADADA;
+		-moz-border-radius: 6px;
+		-webkit-border-radius: 6px;
+		-khtml-border-radius: 6px;
+		border-radius: 6px;
+	margin-top: 0;
+	margin-bottom: 20px;
+	overflow: hidden;
+	padding: 10px;
+	}
+	.r6.module.full {
+		width: 690px;
+		}
+	.r6.module p {
+		color: #666;
+		}
+	.r6.module .r6.interior {
+		background-color: #FFF;
+		border: 1px solid #C9C9C9;
+			-moz-border-radius: 4px;
+			-webkit-border-radius: 4px;
+			-khtml-border-radius: 4px;
+			border-radius: 4px;
+		padding: 10px;
+		margin-bottom: 10px;
+		}
+		.r6.module .r6.interior.half {
+			width: 318px;
+			}
+	.r6.module .r6.moduleIcon {
+		float: left;
+		}
+
+table.r6.tableDataGrid {
+	width: 100%;
+	border-left: 1px solid #C9C9C9;
+	border-right: 1px solid #C9C9C9;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	}
+	table.r6.tableDataGrid tr:first-child td {
+		border-top: 1px solid #C9C9C9;
+		}
+	table.r6.tableDataGrid tr td {
+		border-bottom: 1px solid #C9C9C9;
+		padding: 10px;
+		}
+	table.r6.tableDataGrid tr.trDataGridRow td {
+		background-color: #FFF;
+		}
+	table.r6.tableDataGrid tr.trDataGridAltRow td {
+		background-color: #E5E5E5;
+		}
+	table.r6.tableDataGrid a {
+		text-decoration: underline;
+		}
+
+input.r6.full,
+textarea.r6.full {
+	width:100%;
+	}
+
+label.big {
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #264978;
+	}
+	
+fieldset.r6#signUpName {
+	float: left;
+	padding-right: 30px;
+	width: 310px;
+	border-right: 1px solid #9A9A9A
+	}
+	
+fieldset.r6#addToList {
+	float: left;
+	padding-left: 30px;
+	width: 310px;
+	}
+
+/******************************
+PUBLISH - TARGET AUDIENCE
+******************************/
+
+.r6.divSendMessageCampaign {
+	border-bottom: 1px solid #CCC;
+	margin-bottom: 10px;
+	margin-left: 70px;
+	padding-bottom: 10px;
+}
+
+.r6.divSendMessageContents {
+	margin-left: 70px;
+	}
+	.r6.divSendMessageContents#twitterDetails,
+	.r6.divSendMessageContents#communityDetails,
+	.r6.divSendMessageContents#emailShareBarDetails {
+		margin-left: 30px;
+	}
+
+.sendRecipientsLists #submitMessageEdit {
+	display: block;
+	}
+	
+.divSendMessageConfirmation {
+	margin-left: 70px;
+}
+	
+/******************************
+PUBLISH - SOCIAL MEDIA OPTIONS
+******************************/
+
+p#charLeft,
+p#charExplain {
+	font-size: 0.8em;
+	}
+p#charExplain {
+	margin-bottom: 4px;
+	}

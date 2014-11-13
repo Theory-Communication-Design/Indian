@@ -1,0 +1,335 @@
+/*
+ * YouTube TV
+ */
+
+/*
+ * Base Canvas
+ */
+.ytv-canvas{
+	display: block;
+	overflow: hidden;
+	font-family: arial, sans-serif;
+	}
+.ytv-canvas ::-webkit-scrollbar{
+	border-left: 1px solid #CCC;
+	width: 10px;
+	}
+.ytv-canvas ::-webkit-scrollbar-thumb{
+	background: rgba(255,255,255,0.1);
+	}
+
+/*
+ * Video
+ */
+.ytv-video{
+	position: absolute;
+	top: 0;
+    right: 310px;
+    bottom: 0;
+    left: 0;
+    height: 360px;
+	}
+	.ytv-video iframe{
+		width: 100%;
+		height: 100%;
+		border: none;
+		outline: none;
+		display: block;
+		}
+
+/*
+ * List
+ */
+.ytv-list{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 280px;
+	/*background: #EEE;*/
+	}
+	
+	.ytv-list-inner{
+		/*overflow: auto;*/
+		/*position: absolute;*/
+		overflow-y:scroll;
+		top: 208px;
+		max-height:500px;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	    -webkit-overflow-scrolling: touch;
+		}
+		::-webkit-scrollbar {
+			height: 8px;
+			width: 8px;
+			background: #E1E1E1;
+		}
+		
+		::-webkit-scrollbar-thumb {
+			/*background: #393812;*/
+			background: #CECECE;
+			-webkit-border-radius: 1ex;
+			-webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 1);
+		}
+		
+		::-webkit-scrollbar-corner {
+			background: #000;
+		}
+	.ytv-list ul{
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		}
+		.ytv-list .ytv-active a{
+			border-left: 2px solid #fff;
+			/*background: rgba(255,255,255,0.05);*/
+			}
+		.ytv-list a{
+			display: block;
+			text-decoration: none;
+			font-size: 11px;
+			color: #9C122B;
+			padding: 10px;
+			padding-left: 8px;
+			border-top: 1px solid rgba(255,255,255,0.1);
+			/*border-bottom: 1px solid rgba(0,0,0,0.5);*/
+			border-bottom: 1px solid #CCC;
+			border-left: 2px solid transparent;
+			}
+			.ytv-list a b{		
+			    max-height: 45px;
+			    overflow: hidden;
+			    display: block;
+			    text-overflow: ellipsis;
+				font-family:'latobold';
+				font-weight:400;
+				font-size:14px;
+				}
+			.ytv-list li:first-child a{ border-top: none; }
+			/*.ytv-list li:last-child a{ border-bottom: none; }*/
+			.ytv-list a:hover,
+			.ytv-list-header .ytv-playlists a:hover{ background: #F9F9F9; /*background: rgba(255,255,255,0.05);*/ }
+			.ytv-list a:active,
+			.ytv-list-header .ytv-playlists a:active{ background: #FFF/*rgba(0,0,0,0.05)*/; }
+		
+		.ytv-list .ytv-content{ padding-left: 125px; }
+		.ytv-list .ytv-thumb-stroke{
+			position: absolute;
+			top: 1px;
+			left: 1px;
+			bottom: 1px;
+			right: 1px;
+			z-index: 2;
+			outline: 1px solid rgba(255,255,255,0.1);
+			}
+		.ytv-list .ytv-thumb{
+			float: left;
+			position: relative;
+			outline: 1px solid rgba(0,0,0,0.5);
+			}
+			.ytv-list .ytv-thumb img{
+				width: 120px;
+				display: block;
+				}
+			.ytv-list .ytv-thumb span{
+				position: absolute;
+				bottom: 5px;
+				right: 5px;
+				color: #eee;
+				background: rgba(0,0,0,0.7);
+				font-size: 11px;
+				font-weight: bold;
+				padding: 0px 4px;
+				
+				-webkit-border-radius: 3px;
+				-moz-border-radius: 3px;
+				border-radius: 3px;
+				}
+		.ytv-views{
+		    display: block;
+		    margin-top: 5px;
+		    font-size: 10px;
+		    font-weight: normal;
+		    opacity: 0.3;
+			}
+
+
+	.ytv-list-header{
+		height: 220px;
+		/*-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+		-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);*/
+		}
+		.ytv-list-header a{
+			/*background: rgba(255,255,255,0.05);*/
+    		position: relative;
+    		z-index: 10;
+			}
+		.ytv-list-header img,
+		.ytv-list .ytv-playlists .ytv-thumb img{
+			width: 30px;
+			height:30px;
+			vertical-align: middle;
+			}
+		.ytv-list-header span{		
+			font-family: 'latobold';
+		    padding-left: 10px;
+		    font-size: 18px;
+		    font-weight: 400;
+			}
+
+/*
+ * Playlists
+ */
+.ytv-playlists{
+    z-index: 9;
+    /*position: absolute;*/
+    background: #FFF;
+    top:52px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+	}
+	.ytv-playlists img,
+	.ytv-list-header img{
+	    float: left;
+		}
+	.ytv-playlists a span,
+	.ytv-list-header a span{	
+	    white-space: nowrap;
+	    padding-left: 10px;
+	    display: block;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+		}
+	.ytv-list-header > a span{
+		line-height: 30px;
+		height:30px;
+		}
+	.ytv-list-header .ytv-playlists a{
+		background: #FFF;
+		}
+	.ytv-playlist-open .ytv-playlists{
+		display: block;
+		}
+
+/*
+ * Modifiers
+ */
+.ytv-relative{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	}
+.ytv-full{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100% !important;
+	height: 100% !important;
+	margin: 0 !important;
+	}
+.ytv-arrow {
+	height: 10px;
+	width: 0;
+	position: absolute;
+	top: 20px;
+	right: 10px;
+	border: 10px solid transparent;
+	float: right;
+	border-top-color: rgba(0,0,0,0.4);
+	display: none;
+	}
+	.ytv-has-playlists .ytv-arrow{
+		display: inline-block;
+		}
+	.ytv-playlist-open .ytv-arrow{
+		border-color: transparent;
+		border-bottom-color: rgba(0,0,0,0.4);
+		top: 0px;
+		}
+
+.ytv-list-header a:after,
+.ytv-clear:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+	}
+	
+	
+/*Video Details CSS Start*/
+.container{
+	margin:20px auto 45px;
+	padding:0;
+	width:640px;
+	height:auto;
+	overflow:hidden;
+}
+	.container #title{
+		float:left;
+		margin:0 0 10px;
+		width:640px;
+		overflow:hidden;
+		height:auto;
+		font-family: 'latobold';
+		font-size: 22px;
+		font-weight: 400;
+		color: #9c122a;
+	}
+	.container #description{
+		float:left;
+		margin:0 0 10px;
+		overflow-y:scroll;
+		width:640px;
+		height:300px;
+		font-family: 'latoregular';
+		font-size: 15px;
+		line-height:24px;
+		font-weight: 400;
+		color: #383838;
+		word-wrap: break-word;
+		white-space: pre-wrap;
+	}
+	.container #extrainfo{
+		float:left;
+		margin:0 0 10px;
+		overflow:hidden;
+		width:640px;
+		height:auto;
+		font-family: 'latoregular';
+		font-size: 12px;
+		line-height:24px;
+		font-weight: 400;
+		color: #383838;
+		word-wrap: break-word;
+		white-space: pre-wrap;
+	}
+	
+	.container #description a{
+		font-family: 'latobold';
+		font-weight:300;
+		color:#167ac6;
+		text-decoration: none;
+	}
+	
+	.container #extrainfo a{
+		font-family: 'latobold';
+		font-weight:300;
+		color:#167ac6;
+		text-decoration: none;
+	}
+	
+	.container #description a:hover{
+		color:#9C122B;
+		text-decoration: underline;
+	}
+	.container b{
+		font-weight:700;
+	}
+/*Video Details CSS End*/
