@@ -1,0 +1,148 @@
+
+@charset "utf-8";
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    overflow-y: scroll;
+}
+
+body {
+
+  background-image: url("assets/refuel-background-small.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+}
+
+#wrapper {
+  height: 50%; 
+  width: 100%; 
+  overflow: ; 
+  margin: auto; 
+  position: absolute; 
+  top: 0; left: 0; bottom: 0; right: 0; 
+}
+
+#words {
+    max-width:600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#sign-up {
+    max-width:590px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#mailchimp {
+    max-width:327px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+
+
+
+
+
+h1 {
+    text-align:center;
+    font-size: 12pt !important;
+    line-height: 14pt;
+    color: #fff;
+    font-family: "Open Sans",sans-serif;
+}
+
+p {
+    text-align:center;
+    font-size: 10pt !important;
+    line-height: 14pt;
+    color: #fff;
+    font-family: "Open Sans",sans-serif;
+}
+
+.required.email{
+    line-height: 20pt;
+    margin-top: 20px;
+    width: 70%;
+    height: 35px;
+}
+
+.button {
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+    width: 20%;
+    height: 42px;
+    letter-spacing: 1pt;
+    margin-bottom: 40px;
+    padding: px;
+    overflow: auto;
+}
+
+input.submit {
+    background-color: #000;
+    border: 0 none;
+    clear: both;
+    color: #fff;
+    display: inline-block;
+    
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    height: 35px;
+    letter-spacing: 1px;
+    line-height: 200%;
+    margin: 0 auto;
+    vertical-align: middle;
+    width: 20%;
+    margin-left: -4px;
+}
+
+input.required-email{
+    border: 0px solid #ccc;
+    display: inline-block;
+    font-size: 12px;
+    height: 35px;
+    letter-spacing: 1px;
+    line-height: 200%;
+    margin: 0 auto;
+    padding: 0 0 0 8px;
+    vertical-align: bottom;
+    width: 70%;
+}
+
+}
+
+.clear {
+    clear: both;
+}
+
+input, textarea, select {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+@media only screen and (max-device-width: 480px) {
+    body{
+        background-image: url(assets/refuel-background-small.png");
+    }
+}
+
+
+
+
+
+
+
+
+
